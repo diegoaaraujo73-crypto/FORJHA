@@ -1,0 +1,5043 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FORJHA — Performance começa na escolha</title>
+  <meta name="description" content="FORJHA: roupas, acessórios e suplementos para quem constrói sua evolução todos os dias. Vista sua força.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="FORJHA — Performance começa na escolha">
+  <meta property="og:description" content="A força não se improvisa. Roupas, suplementos e acessórios para sua evolução.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="forjha-pro.css"/>
+  <link rel="stylesheet" href="forjha-signature.css"/> 
+  <link rel="stylesheet" href="forjha-suite.css"/>
+</head>
+
+<body>
+
+
+
+
+<!-- ========== NAVBAR ========== -->
+
+<nav class="navbar navbar-expand-lg navbar-forjha">
+
+  <div class="container">
+
+    <a class="navbar-brand navbar-brand-logo" href="#home">
+      FOR<span>JHA</span>
+    </a>
+
+    <button class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu">
+
+      <i class="bi bi-list text-white fs-4"></i>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+
+      <ul class="navbar-nav me-auto ms-4 gap-1">
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-forjha active" href="#home">
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-forjha" href="#produtos">
+            Produtos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-forjha" href="#monte-kit">
+            Monte seu kit
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-forjha" href="sobre.html">
+            Sobre
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-forjha" href="blog.html">
+            Conteúdo
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-forjha" href="contato.html">
+            Contato
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-forjha" href="#calculadora">
+            Calculadora
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-forjha" href="#depoimentos">
+            Depoimentos
+          </a>
+        </li>
+
+      </ul>
+
+
+      <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+
+        <div class="search-wrap d-none d-lg-block">
+
+          <i class="bi bi-search"></i>
+
+          <input type="text"
+                 class="form-control input-forjha"
+                 id="searchInput"
+                 placeholder="Buscar produto..."
+                 oninput="filterProducts()"/>
+
+        </div>
+
+
+        <button class="btn-cart btn"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cartOffcanvas"
+                style="position:relative;">
+
+          <i class="bi bi-bag"></i>
+          Carrinho
+
+          <span class="cart-badge" id="cartCount">
+            0
+          </span>
+
+        </button>
+
+
+        <a class="btn btn-outline-forjha d-none d-md-inline-flex align-items-center" href="sobre.html" aria-label="Conheça a FORJHA">
+          <i class="bi bi-fire me-2"></i> Nossa essência
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<!-- ========== HERO ========== -->
+
+<section class="hero" id="home">
+  <span class="fp-orb a"></span><span class="fp-orb b"></span><span class="fp-scroll-ind" aria-hidden="true"></span>
+
+  <div class="container position-relative" style="z-index:2;">
+
+    <div class="row">
+
+      <div class="col-lg-7">
+
+        <p class="hero-tag">
+
+          <i class="bi bi-lightning-charge-fill me-1"></i>
+          Roupas e acessórios FORJHA
+
+        </p>
+
+
+        <h1 class="hero-title">
+
+          FORJHA
+
+          <span class="accent">
+            SEUS LIMITES
+          </span>
+
+        </h1>
+
+
+        <p class="hero-desc">
+
+          Roupas e acessórios para acompanhar sua rotina de treino.
+          Vista sua evolução com a FORJHA.
+
+        </p>
+
+
+        <div class="d-flex flex-wrap gap-3">
+
+          <a href="#produtos"
+             class="btn btn-primary-forjha">
+
+            <i class="bi bi-arrow-down-circle me-2"></i>
+            Ver Produtos
+
+          </a>
+
+
+          <a href="sobre.html"
+             class="btn btn-outline-forjha">
+
+            Sobre a Forjha
+
+          </a>
+
+        </div>
+
+
+        <div class="hero-stats"
+             style="display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap;">
+
+          <div style="border-left:3px solid var(--forjha-orange);padding-left:1rem;">
+
+            <div style="font-size:2rem;font-weight:700;color:var(--forjha-orange);">
+              50+
+            </div>
+
+            <div style="color:var(--forjha-gray);font-size:0.9rem;">
+              Produtos Premium
+            </div>
+
+          </div>
+
+
+          <div style="border-left:3px solid var(--forjha-orange);padding-left:1rem;">
+
+            <div style="font-size:2rem;font-weight:700;color:var(--forjha-orange);">
+              2k+
+            </div>
+
+            <div style="color:var(--forjha-gray);font-size:0.9rem;">
+              Clientes Satisfeitos
+            </div>
+
+          </div>
+
+
+          <div style="border-left:3px solid var(--forjha-orange);padding-left:1rem;">
+
+            <div style="font-size:2rem;font-weight:700;color:var(--forjha-orange);">
+              24h
+            </div>
+
+            <div style="color:var(--forjha-gray);font-size:0.9rem;">
+              Entrega Garantida
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========== FEATURES ========== -->
+
+<section class="py-5">
+
+  <div class="container">
+
+    <div class="row g-3">
+
+      <div class="col-6 col-md-3">
+
+        <div class="feature-card text-center">
+
+          <div class="feature-icon">
+            <i class="bi bi-truck"></i>
+          </div>
+
+          <div class="feature-title">
+            Frete Grátis
+            <div class="feature-text">
+              São Paulo e Rio de Janeiro
+             </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-md-3">
+
+        <div class="feature-card text-center">
+
+          <div class="feature-icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+
+          <div class="feature-title">
+            Garantia
+          </div>
+
+          <div class="feature-text">
+            12 meses em todos produtos
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-md-3">
+
+        <div class="feature-card text-center">
+
+          <div class="feature-icon">
+            <i class="bi bi-arrow-counterclockwise"></i>
+          </div>
+
+          <div class="feature-title">
+            Troca Fácil
+          </div>
+
+          <div class="feature-text">
+            30 dias para troca sem custo
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-md-3">
+
+        <div class="feature-card text-center">
+
+          <div class="feature-icon">
+            <i class="bi bi-headset"></i>
+          </div>
+
+          <div class="feature-title">
+            Suporte 24h
+          </div>
+
+          <div class="feature-text">
+            Atendimento especializado
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========== MODELOS EM DESTAQUE ========== -->
+
+<section class="py-5 model-slider-section" id="modelos">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-5">
+
+        <p class="section-sub">
+          Modelos em destaque
+        </p>
+
+        <h2 class="section-title">
+
+          Nossos
+          <span class="accent">
+            modelos
+          </span>
+          com as roupas da FORJHA
+
+        </h2>
+
+        <p class="model-slider-text">
+
+          Veja como cada peça fica no corpo, no estilo e na performance.
+          A combinação certa entre conforto, visual e atitude.
+
+        </p>
+
+
+        <div class="model-slider-controls">
+
+          <button type="button"
+                  class="slider-btn"
+                  id="prevModel"
+                  aria-label="Modelo anterior">
+
+            <i class="bi bi-arrow-left"></i>
+
+          </button>
+
+
+          <button type="button"
+                  class="slider-btn"
+                  id="nextModel"
+                  aria-label="Próximo modelo">
+
+            <i class="bi bi-arrow-right"></i>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-lg-7">
+
+        <!--
+          CARROSSEL DE IMAGENS FORJHA
+          Para adicionar uma imagem, copie um bloco .model-slide e altere o src e o alt.
+          Coloque os arquivos novos dentro da pasta "img".
+        -->
+        <div class="model-slider" id="modelSlider" aria-label="Carrossel de modelos FORJHA">
+          <div class="model-slide active">
+            <img src="img/carrossel-forjha-01.png" alt="Modelo usando camiseta preta FORJHA"/>
+          </div>
+          <div class="model-slide">
+            <img src="img/carrossel-forjha-02.png" alt="Dois modelos usando uniformes FORJHA"/>
+          </div>
+          <div class="model-slide">
+            <img src="img/carrossel-forjha-novo-03.png" alt="Modelo usando camiseta FORJHA em ambiente externo"/>
+          </div>
+          <div class="model-slide">
+            <img src="img/carrossel-forjha-novo-04.png" alt="Dois modelos usando uniformes FORJHA na academia"/>
+          </div>
+          <div class="model-slide">
+            <img src="img/carrossel-forjha-extra-05.png" alt="Equipe FORJHA em frente a um painel de cinema"/>
+          </div>
+          <div class="model-slide">
+            <img src="img/carrossel-forjha-extra-06.png" alt="Pessoa usando camiseta FORJHA em ambiente externo"/>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</section>
+
+
+
+<!-- ========== FORJHA 4.0 | MONTE SEU KIT ========== -->
+<section class="forjha-kit-section py-5" id="monte-kit">
+  <div class="container">
+    <div class="row align-items-end g-3 mb-4">
+      <div class="col-lg-8">
+        <p class="section-sub">SUA COMBINAÇÃO, SEU RITMO</p>
+        <h2 class="section-title">Monte seu <span class="accent">kit FORJHA</span></h2>
+        <p class="forjha-kit-intro mb-0">Combine peças e acessórios, veja o total e adicione tudo ao carrinho de uma vez.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end"><span class="kit-local-note"><i class="bi bi-lightning-charge-fill"></i> Personalização instantânea</span></div>
+    </div>
+    <div class="kit-builder">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-8">
+          <div class="row g-3" id="kitChoices">
+            <div class="col-md-4"><label class="kit-label" for="kitClothing">01 · Roupa</label><select id="kitClothing" class="form-select kit-select"><option value="">Escolha uma peça</option></select></div>
+            <div class="col-md-4"><label class="kit-label" for="kitSupplement">02 · Suplemento</label><select id="kitSupplement" class="form-select kit-select"><option value="">Escolha um suplemento</option></select></div>
+            <div class="col-md-4"><label class="kit-label" for="kitAccessory">03 · Acessório</label><select id="kitAccessory" class="form-select kit-select"><option value="">Escolha um acessório</option></select></div>
+          </div>
+          <div class="kit-selected-list mt-4" id="kitSelectedList"><i class="bi bi-info-circle me-2"></i>Selecione produtos para montar sua combinação.</div>
+        </div>
+        <div class="col-lg-4">
+          <div class="kit-summary">
+            <span class="kit-summary-label">VALOR DA COMBINAÇÃO</span>
+            <strong id="kitTotal">R$ 0,00</strong>
+            <span id="kitItemCount">0 produtos selecionados</span>
+            <button type="button" class="btn btn-primary-forjha w-100 mt-3" id="addKitToCart" disabled><i class="bi bi-bag-plus me-2"></i>Adicionar kit ao carrinho</button>
+            <button type="button" class="kit-clear-btn" id="clearKit">Limpar combinação</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRODUTOS ========== -->
+
+<section class="py-5 section-bg-alt" id="produtos">
+
+  <div class="container">
+
+    <div class="row mb-4">
+
+      <div class="col-md-6">
+
+        <h2 class="section-title">
+
+          Nossos
+          <span class="accent">
+            Produtos
+          </span>
+
+        </h2>
+
+        <div class="divider-line"></div>
+
+      </div>
+
+
+      <div class="col-md-6 d-flex align-items-end justify-content-md-end">
+
+        <div class="search-wrap d-md-block d-lg-none w-100">
+
+          <i class="bi bi-search"></i>
+
+          <input type="text"
+                 class="form-control input-forjha w-100"
+                 id="searchInput2"
+                 placeholder="Buscar produto..."
+                 oninput="filterProducts()"/>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Categorias -->
+
+    <div class="row g-2 mb-4" id="categoryFilter">
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+
+        <div class="cat-card p-3 text-center active"
+             onclick="setCategory('all', this)"
+             data-cat="all">
+
+          <div class="cat-icon">
+            <i class="bi bi-grid-fill"></i>
+          </div>
+
+          <div class="cat-name">
+            Todos
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+
+        <div class="cat-card p-3 text-center"
+             onclick="setCategory('roupas', this)"
+             data-cat="roupas">
+
+          <div class="cat-icon">
+            <i class="bi bi-person-standing"></i>
+          </div>
+
+          <div class="cat-name">
+            Roupas
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+
+        <div class="cat-card p-3 text-center"
+             onclick="setCategory('suplementos', this)"
+             data-cat="suplementos">
+
+          <div class="cat-icon">
+            <i class="bi bi-capsule"></i>
+          </div>
+
+          <div class="cat-name">
+            Suplementos
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+
+        <div class="cat-card p-3 text-center"
+             onclick="setCategory('acessorios', this)"
+             data-cat="acessorios">
+
+          <div class="cat-icon">
+            <i class="bi bi-watch"></i>
+          </div>
+
+          <div class="cat-name">
+            Acessórios
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- Sort + Count -->
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+
+      <p class="mb-0 text-secondary"
+         style="font-size:0.85rem;"
+         id="productCount">
+      </p>
+
+
+      <select class="form-select input-forjha"
+              style="width:auto;"
+              id="sortSelect"
+              onchange="sortProducts()">
+
+        <option value="default">
+          Ordenar: Padrão
+        </option>
+
+        <option value="price-asc">
+          Menor Preço
+        </option>
+
+        <option value="price-desc">
+          Maior Preço
+        </option>
+
+        <option value="name">
+          Nome A-Z
+        </option>
+
+        <option value="rating">
+          Melhor Avaliação
+        </option>
+
+      </select>
+
+    </div>
+
+
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3 forjha-catalog-tools">
+      <button type="button" class="btn btn-outline-forjha btn-favorites-filter" id="favoritesFilter" onclick="toggleFavoritesFilter()" aria-pressed="false">
+        <i class="bi bi-heart me-2"></i>Ver favoritos <span class="favorites-count" id="favoritesCount">0</span>
+      </button>
+      <span class="catalog-hint"><i class="bi bi-shield-check me-1"></i>Escolhas feitas para acompanhar seu ritmo.</span>
+    </div>
+
+    <!-- Grid de produtos -->
+
+    <div class="row g-4"
+         id="productsGrid">
+    </div>
+
+
+    <div class="text-center mt-4 d-none"
+         id="noResults">
+
+      <i class="bi bi-search text-secondary"
+         style="font-size:2.5rem;">
+      </i>
+
+      <p class="text-secondary mt-2">
+        Nenhum produto encontrado.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<div class="fp-marquee" aria-hidden="true"><div class="fp-marquee-track"><span>PERFORMANCE ✦</span><span>CONFORTO ✦</span><span>EVOLUÇÃO ✦</span><span>DISCIPLINA ✦</span><span>FORJHA SEUS LIMITES ✦</span><span>PERFORMANCE ✦</span><span>CONFORTO ✦</span><span>EVOLUÇÃO ✦</span><span>DISCIPLINA ✦</span><span>FORJHA SEUS LIMITES ✦</span><span>PERFORMANCE ✦</span><span>CONFORTO ✦</span><span>EVOLUÇÃO ✦</span><span>DISCIPLINA ✦</span><span>FORJHA SEUS LIMITES ✦</span><span>PERFORMANCE ✦</span><span>CONFORTO ✦</span><span>EVOLUÇÃO ✦</span><span>DISCIPLINA ✦</span><span>FORJHA SEUS LIMITES ✦</span></div></div>
+<!-- FORJHA PRO: COMO FUNCIONA -->
+<section class="fp-sec" id="como-funciona"><div class="container"><div class="text-center mb-5"><p class="section-sub">Simples assim</p><h2 class="section-title">Como <span class="accent">funciona</span></h2></div><div class="fp-steps"><div class="fp-step"><i class="bi bi-bag-check"></i><h4>Escolha</h4><p>Roupas, suplementos e acessórios pensados para o treino.</p></div><div class="fp-step"><i class="bi bi-boxes"></i><h4>Monte seu kit</h4><p>Combine peças e veja o total na hora.</p></div><div class="fp-step"><i class="bi bi-credit-card"></i><h4>Finalize</h4><p>Checkout rápido com os dados salvos no navegador.</p></div><div class="fp-step"><i class="bi bi-truck"></i><h4>Receba</h4><p>Acompanhe a entrega e comece a evoluir.</p></div></div></div></section>
+<section class="fp-stats"><div class="container"><div class="row"><div class="col-6 col-md-3"><div class="fp-stat"><b data-to="50">0</b><span>Produtos</span></div></div><div class="col-6 col-md-3"><div class="fp-stat"><b data-to="2000">0</b><span>Clientes</span></div></div><div class="col-6 col-md-3"><div class="fp-stat"><b data-to="24">0</b><span>Horas de entrega</span></div></div><div class="col-6 col-md-3"><div class="fp-stat"><b data-to="98">0</b><span>% satisfação</span></div></div></div></div></section>
+<section class="fp-sec" id="calculadora"><div class="container"><div class="row justify-content-center"><div class="col-lg-8"><div class="text-center mb-4"><p class="section-sub">Ferramenta gratuita</p><h2 class="section-title">Calculadora de <span class="accent">metas</span></h2><p class="text-secondary">Estimativa de calorias, proteína e água (fórmula Mifflin-St Jeor). Não substitui acompanhamento profissional.</p></div>
+<form class="fp-calc" id="fpCalc" onsubmit="return false"><div class="row g-3"><div class="col-6 col-md-3"><label>Peso (kg)</label><input name="peso" type="number" value="75" min="30" max="250"></div><div class="col-6 col-md-3"><label>Altura (cm)</label><input name="altura" type="number" value="175" min="120" max="230"></div><div class="col-6 col-md-3"><label>Idade</label><input name="idade" type="number" value="25" min="14" max="90"></div><div class="col-6 col-md-3"><label>Sexo</label><select name="sexo"><option value="m">Masculino</option><option value="f">Feminino</option></select></div><div class="col-md-6"><label>Atividade</label><select name="nivel"><option value="1.375">Leve (1-3x/sem)</option><option value="1.55" selected>Moderada (3-5x/sem)</option><option value="1.725">Intensa (6-7x/sem)</option></select></div><div class="col-md-6"><label>Objetivo</label><select name="meta"><option value="cut">Definição</option><option value="man" selected>Manter</option><option value="bulk">Ganhar massa</option></select></div></div>
+<div class="fp-result"><div><b id="rKcal">0</b><small>kcal por dia</small></div><div><b id="rProt">0</b><small>proteína por dia</small></div><div><b id="rAgua">0</b><small>água por dia</small></div></div></form></div></div></div></section>
+<section class="fp-sec fp-faq" id="faq"><div class="container" style="max-width:820px"><div class="text-center mb-5"><p class="section-sub">Dúvidas</p><h2 class="section-title">Perguntas <span class="accent">frequentes</span></h2></div><details><summary>Como funciona a entrega?</summary><p>O prazo exibido é o do catálogo demonstrativo; no checkout você confirma endereço e frete.</p></details><details><summary>Posso trocar um produto?</summary><p>Sim. Fale com a equipe pelo WhatsApp informando o pedido e o motivo da troca.</p></details><details><summary>Como monto meu kit?</summary><p>Na seção Monte seu kit, selecione os itens e adicione tudo ao carrinho de uma vez.</p></details><details><summary>Como comparo produtos?</summary><p>Use o botão de comparar nos cards. Você pode comparar até 3 produtos por vez.</p></details></div></section>
+<!-- ========== NEWSLETTER ========== -->
+
+<section class="py-5 section-bg-alt">
+
+  <div class="container">
+
+    <div class="newsletter-section">
+
+      <div class="row align-items-center g-4">
+
+        <div class="col-md-6">
+
+          <p class="section-sub">
+            Newsletter
+          </p>
+
+          <h2 class="section-title">
+
+            RECEBA
+            <span class="accent">
+              OFERTAS
+            </span>
+
+            <br>
+
+            EXCLUSIVAS
+
+          </h2>
+
+          <p class="text-secondary mt-2 mb-0">
+
+            Fique por dentro das melhores promoções e lançamentos.
+
+          </p>
+
+        </div>
+
+
+        <div class="col-md-6">
+
+          <div class="d-flex gap-2 flex-wrap">
+
+            <input type="email"
+                   class="form-control input-forjha flex-grow-1"
+                   placeholder="Seu melhor e-mail"
+                   id="nlEmail"/>
+
+
+            <button class="btn btn-primary-forjha"
+                    onclick="subscribeNewsletter()">
+
+              <i class="bi bi-send me-1"></i>
+              Inscrever
+
+            </button>
+
+          </div>
+
+
+          <p class="text-secondary mt-2"
+             style="font-size:0.78rem;">
+
+            <i class="bi bi-shield-lock me-1"></i>
+            Sem spam, prometemos.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========== CLIENTES FORJHA ========== -->
+<section class="py-5" id="clientes-forjha">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-sub">Comunidade FORJHA</p>
+      <h2 class="section-title">Quem faz parte da <span class="accent">FORJHA</span></h2>
+      <p class="model-slider-text">Clientes e parceiros que acompanham a nossa jornada.</p>
+    </div>
+    <p class="review-disclaimer text-center">Comentários demonstrativos, criados para ilustrar a seção. Não representam avaliações verificadas de compradores.</p>
+    <div class="reviews-carousel" aria-label="Carrossel de comentários demonstrativos dos clientes">
+      <button class="reviews-nav reviews-prev" type="button" aria-label="Comentários anteriores">‹</button>
+      <div class="reviews-track" id="reviewsTrack" tabindex="0">
+      <article class="review-slide" role="group" aria-label="Comentário 1 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“A camiseta tem um caimento ótimo e o tecido é confortável para treinar.”</p><div class="testimonial-name">Marina Costa</div><div class="testimonial-role">Camiseta esportiva · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 2 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Gostei bastante da qualidade. A peça ficou do jeito que eu esperava.”</p><div class="testimonial-name">Lucas Almeida</div><div class="testimonial-role">Roupas FORJHA · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 3 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“O short é leve e permite fazer os exercícios sem limitar os movimentos.”</p><div class="testimonial-name">Camila Rocha</div><div class="testimonial-role">Short esportivo · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 4 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="4 de 5 estrelas">★★★★☆</div><p class="testimonial-text">“A garrafa é prática e ajuda a manter a hidratação durante o treino.”</p><div class="testimonial-name">Rafael Mendes</div><div class="testimonial-role">Garrafa · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 5 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Produto muito bom para levar na mochila e usar na academia.”</p><div class="testimonial-name">Beatriz Lima</div><div class="testimonial-role">Acessórios · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 6 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Gostei do acabamento e do visual. Combina com vários looks de treino.”</p><div class="testimonial-name">Pedro Henrique</div><div class="testimonial-role">Camiseta · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 7 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="4 de 5 estrelas">★★★★☆</div><p class="testimonial-text">“A coqueteleira é fácil de usar e facilita bastante a rotina.”</p><div class="testimonial-name">Juliana Alves</div><div class="testimonial-role">Coqueteleira · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 8 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Boa opção para quem procura conforto na hora de treinar.”</p><div class="testimonial-name">Gabriel Souza</div><div class="testimonial-role">Short esportivo · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 9 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="4 de 5 estrelas">★★★★☆</div><p class="testimonial-text">“O produto chegou às minhas expectativas e tem ótimo visual.”</p><div class="testimonial-name">Larissa Martins</div><div class="testimonial-role">Linha FORJHA · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 10 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Curti a proposta da loja e a variedade de produtos.”</p><div class="testimonial-name">Matheus Ribeiro</div><div class="testimonial-role">Experiência na loja · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 11 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Peça confortável, bonita e com estilo esportivo.”</p><div class="testimonial-name">Isabela Ferreira</div><div class="testimonial-role">Roupas FORJHA · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 12 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="4 de 5 estrelas">★★★★☆</div><p class="testimonial-text">“Acessório útil para acompanhar os treinos do dia a dia.”</p><div class="testimonial-name">Bruno Carvalho</div><div class="testimonial-role">Acessórios · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 13 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Gostei muito! Já entrou para minhas peças favoritas de treino.”</p><div class="testimonial-name">Ana Clara</div><div class="testimonial-role">Camiseta esportiva · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 14 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Visual marcante e uma opção interessante para quem curte academia.”</p><div class="testimonial-name">Felipe Santos</div><div class="testimonial-role">Linha FORJHA · Avaliação demonstrativa</div></div></article>
+      <article class="review-slide" role="group" aria-label="Comentário 15 de 15"><div class="testimonial-card h-100"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><p class="testimonial-text">“Eu gostaria mais de conversar com o Clark, o Clark.”</p><div class="testimonial-name">Thiago Oliveira</div><div class="testimonial-role">Comunidade FORJHA · Comentário demonstrativo</div></div></article>
+      </div>
+      <button class="reviews-nav reviews-next" type="button" aria-label="Próximos comentários">›</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== EQUIPE — FINAL DA PÁGINA ==========
+-->
+<section class="py-5" id="depoimentos">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="section-sub">Nossa equipe</p>
+      <h2 class="section-title">Feita por:</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="testimonial-card">
+          <div class="d-flex align-items-center gap-3">
+            <div class="testimonial-avatar">D</div>
+            <div>
+              <div class="testimonial-name">DIEGO</div>
+              <div class="testimonial-role">PROGRAMADOR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="testimonial-card">
+          <div class="d-flex align-items-center gap-3">
+            <div class="testimonial-avatar" style="background:#1a6b3c;">J</div>
+            <div>
+              <div class="testimonial-name">JOAO</div>
+              <div class="testimonial-role">PROGRAMADOR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="testimonial-card">
+          <div class="d-flex align-items-center gap-3">
+            <div class="testimonial-avatar" style="background:#3a1a8b;">A</div>
+            <div>
+              <div class="testimonial-name">ANTONY</div>
+              <div class="testimonial-role">PROGRAMADOR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="testimonial-card">
+          <div class="d-flex align-items-center gap-3">
+            <div class="testimonial-avatar" style="background:#3a1a8b;width:40px;height:40px;">C</div>
+            <div>
+              <div class="testimonial-name">CHRISTIAN</div>
+              <div class="testimonial-role">PROGRAMADOR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== FOOTER ========== -->
+
+<footer class="footer-forjha">
+
+  <div class="container">
+
+    <div class="row g-5">
+
+      <div class="col-md-5">
+
+        <div class="footer-brand">
+          FORJHA
+        </div>
+
+        <div class="footer-social mt-3" aria-label="Redes sociais FORJHA">
+          <a href="https://www.instagram.com/sinceforjha?dmpr=cG05ejZ2MnNhdzU3" aria-label="Instagram — adicionar link" title="Adicionar link do Instagram"><i class="bi bi-instagram"></i><span> Instagram</span></a>
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-md-2">
+
+        <div class="footer-title">
+          Loja
+        </div>
+
+        <a href="#produtos" class="footer-link">
+          Suplementos
+        </a>
+
+        <a href="#produtos" class="footer-link">
+          Roupas
+        </a>
+<a href="#produtos" class="footer-link">
+          Acessórios
+        </a>
+
+      </div>
+
+
+      <div class="col-md-5">
+
+        <div class="footer-title">
+          Contato
+        </div>
+
+        <p class="footer-link">
+          <i class="bi bi-envelope me-2"></i>
+          contato@forjha.com.br
+        </p>
+
+        <p class="footer-link">
+          <i class="bi bi-telephone me-2"></i>
+          (16) 997696871
+        </p>
+
+        <p class="footer-link">
+          <i class="bi bi-whatsapp me-2"></i>
+          (16) 997696871
+        </p>
+
+        <p class="footer-link">
+          <i class="bi bi-geo-alt me-2"></i>
+          Batatais, SP — Brasil
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- ========== CART OFFCANVAS ========== -->
+
+<div class="offcanvas offcanvas-end offcanvas-forjha"
+     id="cartOffcanvas"
+     tabindex="-1">
+
+  <div class="offcanvas-header">
+
+    <h5 class="offcanvas-title offcanvas-title-forjha">
+
+      <i class="bi bi-bag me-2"></i>
+      Carrinho
+
+    </h5>
+
+
+    <button type="button"
+            class="btn-close btn-close-forjha"
+            data-bs-dismiss="offcanvas">
+    </button>
+
+  </div>
+
+
+  <div class="offcanvas-body d-flex flex-column">
+
+    <div id="cartItems"
+         class="flex-grow-1">
+    </div>
+
+
+    <div id="cartFooter"
+         class="d-none">
+
+      <div class="cart-total-row">
+
+        <span class="cart-total-label">
+          Total
+        </span>
+
+        <span class="cart-total-val"
+              id="cartTotal">
+          R$ 0
+        </span>
+
+      </div>
+
+
+      <p class="text-secondary"
+         style="font-size:.78rem;margin-bottom:.8rem;">
+
+        <i class="bi bi-info-circle me-1"></i>
+        Frete calculado no checkout
+
+      </p>
+
+
+      <button class="btn-checkout btn"
+              onclick="checkout()">
+
+        <i class="bi bi-credit-card me-2"></i>
+        Finalizar Compra
+
+      </button>
+
+
+      <button class="btn btn-outline-forjha w-100 mt-2"
+              style="font-size:.85rem;"
+              onclick="clearCart()">
+
+        <i class="bi bi-trash me-1"></i>
+        Limpar Carrinho
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- ========== PRODUCT MODAL ========== -->
+
+<div class="modal fade modal-forjha"
+     id="productModal"
+     tabindex="-1">
+
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+
+    <div class="modal-content">
+
+      <div class="modal-header border-0 pb-0">
+
+        <button type="button"
+                class="btn-close btn-close-forjha"
+                data-bs-dismiss="modal">
+        </button>
+
+      </div>
+
+
+      <div class="modal-body">
+
+        <div class="row g-4"
+             id="modalContent">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- ========== TOAST ========== -->
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3"
+     style="z-index:9999;">
+
+  <div id="mainToast"
+       class="toast toast-forjha align-items-center"
+       role="alert">
+
+    <div class="d-flex">
+
+      <div class="toast-body"
+           id="toastMsg">
+      </div>
+
+
+      <button type="button"
+              class="btn-close btn-close-forjha me-2 m-auto"
+              data-bs-dismiss="toast">
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- ========== CHECKOUT MODAL ========== -->
+
+<div class="modal fade modal-forjha"
+     id="checkoutModal"
+     tabindex="-1">
+
+  <div class="modal-dialog modal-dialog-centered">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <h5 class="modal-title"
+            style="font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.1em;color:var(--forjha-orange);">
+
+          <i class="bi bi-credit-card me-2"></i>
+          Finalizar Pedido
+
+        </h5>
+
+
+        <button type="button"
+                class="btn-close btn-close-forjha"
+                data-bs-dismiss="modal">
+        </button>
+
+      </div>
+
+
+      <div class="modal-body">
+
+        <div class="row g-3">
+
+          <div class="col-12">
+
+            <label class="form-label text-secondary"
+                   style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;">
+
+              Nome Completo
+
+            </label>
+
+
+            <input type="text"
+                   class="form-control input-forjha"
+                   id="chkName"
+                   placeholder="Seu nome"/>
+
+          </div>
+
+
+          <div class="col-12">
+
+            <label class="form-label text-secondary"
+                   style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;">
+
+              E-mail
+
+            </label>
+
+
+            <input type="email"
+                   class="form-control input-forjha"
+                   id="chkEmail"
+                   placeholder="email@exemplo.com"/>
+
+          </div>
+
+
+          <div class="col-md-6">
+
+            <label class="form-label text-secondary"
+                   style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;">
+
+              CPF
+
+            </label>
+
+
+            <input type="text"
+                   class="form-control input-forjha"
+                   id="chkCpf"
+                   placeholder="000.000.000-00"/>
+
+          </div>
+
+
+          <div class="col-md-6">
+
+            <label class="form-label text-secondary"
+                   style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;">
+
+              CEP
+
+            </label>
+
+
+            <input type="text"
+                   class="form-control input-forjha"
+                   id="chkCep"
+                   placeholder="00000-000"/>
+
+          </div>
+
+
+          <div class="col-12">
+
+            <label class="form-label text-secondary"
+                   style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;">
+
+              Pagamento
+
+            </label>
+
+
+            <div class="d-flex gap-2 flex-wrap">
+
+              <div class="form-check">
+
+                <input class="form-check-input"
+                       type="radio"
+                       name="payment"
+                       id="payPix"
+                       value="pix"
+                       checked
+                       onchange="updatePaymentMethod()">
+
+
+                <label class="form-check-label text-secondary"
+                       for="payPix">
+
+                  <i class="bi bi-qr-code me-1"></i>
+                  PIX
+
+                </label>
+
+              </div>
+
+
+              <div class="form-check ms-3">
+
+                <input class="form-check-input"
+                       type="radio"
+                       name="payment"
+                       id="payCard"
+                       value="cartao"
+                       onchange="updatePaymentMethod()">
+
+
+                <label class="form-check-label text-secondary"
+                       for="payCard">
+
+                  <i class="bi bi-credit-card me-1"></i>
+                  Cartão
+
+                </label>
+
+              </div>
+
+
+              <div class="form-check ms-3">
+
+                <input class="form-check-input"
+                       type="radio"
+                       name="payment"
+                       id="payBoleto"
+                       value="boleto"
+                       onchange="updatePaymentMethod()">
+
+
+                <label class="form-check-label text-secondary"
+                       for="payBoleto">
+
+                  <i class="bi bi-upc me-1"></i>
+                  Boleto
+
+                </label>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-12"
+               id="pixQrContainer"
+               style="text-align:center;display:none;background:var(--forjha-dark);border:1px solid var(--forjha-border);border-radius:8px;padding:1.5rem;">
+
+            <p style="color:var(--forjha-orange);font-weight:700;margin-bottom:1rem;">
+
+              <i class="bi bi-qr-code me-2"></i>
+              QR Code PIX
+
+            </p>
+
+
+            <div id="qrcodeContainer"
+                 style="display:inline-block;background:white;padding:1rem;border-radius:8px;">
+            </div>
+
+
+            <p style="color:var(--forjha-gray);font-size:.85rem;margin-top:.5rem;margin-bottom:0;">
+
+              <i class="bi bi-info-circle me-1"></i>
+              Escaneie o código com seu celular para pagar
+
+            </p>
+
+          </div>
+
+
+          <div class="col-12">
+
+            <div class="admin-stat mt-1">
+
+              <span class="text-secondary"
+                    style="font-size:.85rem;">
+
+                Total do Pedido:
+
+              </span>
+
+
+              <span id="chkTotal"
+                    style="font-family:'Bebas Neue';font-size:1.4rem;color:var(--forjha-orange);">
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="modal-footer border-0">
+
+        <button class="btn btn-secondary w-100"
+                data-bs-dismiss="modal"
+                style="margin-right:0.5rem;">
+
+          <i class="bi bi-x-circle me-2"></i>
+          Cancelar
+
+        </button>
+
+
+        <button class="btn btn-primary-forjha w-100"
+                onclick="placeOrder()">
+
+          <i class="bi bi-check-circle me-2"></i>
+          Confirmar Pedido
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- ========== PAGAMENTO PIX MODAL ========== -->
+
+<div class="modal fade modal-forjha"
+     id="pixPaymentModal"
+     tabindex="-1"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false">
+
+  <div class="modal-dialog modal-dialog-centered">
+
+    <div class="modal-content">
+
+      <div class="modal-header border-0 pb-0">
+
+        <h5 class="modal-title"
+            style="font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.1em;color:var(--forjha-orange);">
+
+          <i class="bi bi-qr-code me-2"></i>
+          Pagamento via PIX
+
+        </h5>
+
+
+        <button type="button"
+                class="btn-close btn-close-forjha"
+                data-bs-dismiss="modal"
+                onclick="cancelPixPayment()">
+        </button>
+
+      </div>
+
+
+      <div class="modal-body text-center py-4">
+
+        <div style="background:var(--forjha-dark);border:1px solid var(--forjha-border);border-radius:12px;padding:2rem;">
+
+          <p style="color:var(--forjha-gray);font-size:.9rem;margin-bottom:1.5rem;">
+
+            <i class="bi bi-info-circle me-1"></i>
+            Escaneie o código abaixo com seu celular
+
+          </p>
+
+
+          <div id="pixQrCodeLarge"
+               style="display:inline-block;background:white;padding:1.5rem;border-radius:8px;margin-bottom:1.5rem;">
+          </div>
+
+
+          <div style="background:rgba(255,140,0,0.1);border-left:4px solid var(--forjha-orange);padding:1rem;border-radius:4px;text-align:left;margin-bottom:1.5rem;">
+
+            <p style="color:var(--forjha-orange);font-weight:700;margin-bottom:.5rem;font-size:.9rem;">
+
+              <i class="bi bi-hourglass-split me-1"></i>
+              Tempo Estimado de Expiração
+
+            </p>
+
+
+            <div style="font-size:2rem;font-weight:700;color:var(--forjha-orange);font-family:'Bebas Neue';"
+                 id="pixTimer">
+
+              5:00
+
+            </div>
+
+
+            <p style="color:var(--forjha-gray);font-size:.8rem;margin-top:.5rem;margin-bottom:0;">
+
+              Realize o pagamento antes que expire
+
+            </p>
+
+          </div>
+
+
+          <div id="pixOrderInfo"
+               style="background:var(--forjha-dark);border:1px solid var(--forjha-border);padding:1rem;border-radius:8px;margin-bottom:1.5rem;text-align:left;">
+
+            <p style="color:var(--forjha-gray);font-size:.85rem;margin-bottom:.5rem;">
+
+              <strong>ID do Pedido:</strong>
+
+              <span id="pixOrderId"
+                    style="color:var(--forjha-orange);">
+                ---
+              </span>
+
+            </p>
+
+
+            <p style="color:var(--forjha-gray);font-size:.85rem;margin-bottom:0;">
+
+              <strong>Valor:</strong>
+
+              <span id="pixOrderValue"
+                    style="color:var(--forjha-orange);font-weight:700;font-size:1rem;">
+
+                R$ 0,00
+
+              </span>
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="modal-footer border-0">
+
+        <button class="btn btn-outline-forjha w-100"
+                data-bs-dismiss="modal"
+                onclick="cancelPixPayment()">
+
+          <i class="bi bi-x-circle me-2"></i>
+          Cancelar Pagamento
+
+        </button>
+
+
+        <button class="btn btn-primary-forjha w-100"
+                onclick="confirmPixPayment()">
+
+          <i class="bi bi-check-circle me-2"></i>
+          Já Paguei
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<!-- FERRAMENTAS DE ACESSIBILIDADE -->
+<div class="accessibility-tools" aria-label="Ferramentas de acessibilidade">
+  <button type="button" id="fontDown" aria-label="Diminuir fonte" title="Diminuir fonte">A−</button>
+  <button type="button" id="fontUp" aria-label="Aumentar fonte" title="Aumentar fonte">A+</button>
+  <button type="button" id="contrastToggle" aria-pressed="false">Alto contraste</button>
+</div>
+
+<!-- Player flutuante (lado esquerdo) -->
+<div class="forjha-music-player" id="fpMusic">
+      <button type="button" class="music-toggle" id="fpMusicToggle" aria-label="Minimizar player" aria-expanded="true"><i class="bi bi-chevron-down"></i></button>
+      <div class="music-player-icon" aria-hidden="true"><i class="bi bi-music-note-beamed"></i></div>
+      <div class="music-player-info">
+        <span class="music-player-label">TRILHA FORJHA</span>
+        <strong id="musicTrackName">Adicione suas músicas</strong>
+        <span id="musicTrackHint">O player está pronto para receber arquivos MP3.</span>
+      </div>
+      <audio id="forjhaAudio" controls autoplay preload="auto" aria-label="Player de música FORJHA"></audio>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+<script>
+
+
+// ============================================================
+// CARROSSEL DE MODELOS — ANIMAÇÃO E ALTURA ADAPTÁVEL
+// ============================================================
+
+const modelSlider = document.getElementById('modelSlider');
+const modelSlides = modelSlider ? Array.from(modelSlider.querySelectorAll('.model-slide')) : [];
+const prevModelBtn = document.getElementById('prevModel');
+const nextModelBtn = document.getElementById('nextModel');
+let currentModel = 0;
+let modelTimer = null;
+
+function ajustarAlturaCarrossel() {
+  if (!modelSlider || !modelSlides.length) return;
+  const img = modelSlides[currentModel]?.querySelector('img');
+  if (!img) return;
+  const aplicarProporcao = () => {
+    if (img.naturalWidth && img.naturalHeight) {
+      // Mantém a proporção original da imagem ativa, inclusive no celular.
+      modelSlider.style.aspectRatio = 'auto';
+    }
+  };
+  if (img.complete) aplicarProporcao();
+  else img.addEventListener('load', aplicarProporcao, { once: true });
+}
+
+function showModel(index) {
+  if (!modelSlides.length) return;
+  currentModel = (index + modelSlides.length) % modelSlides.length;
+  modelSlides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === currentModel);
+    slide.setAttribute('aria-hidden', i === currentModel ? 'false' : 'true');
+  });
+  ajustarAlturaCarrossel();
+}
+
+function iniciarCarrosselAutomatico() {
+  if (modelTimer) clearInterval(modelTimer);
+  if (modelSlides.length > 1) {
+    modelTimer = setInterval(() => showModel(currentModel + 1), 5000);
+  }
+}
+
+if (modelSlider && modelSlides.length) {
+  modelSlides.forEach(slide => {
+    const img = slide.querySelector('img');
+    if (img) {
+      img.addEventListener('load', ajustarAlturaCarrossel);
+      img.addEventListener('error', () => console.warn('Imagem do carrossel não encontrada:', img.src));
+    }
+  });
+  prevModelBtn?.addEventListener('click', () => {
+    showModel(currentModel - 1);
+    iniciarCarrosselAutomatico();
+  });
+  nextModelBtn?.addEventListener('click', () => {
+    showModel(currentModel + 1);
+    iniciarCarrosselAutomatico();
+  });
+  modelSlider.addEventListener('mouseenter', () => clearInterval(modelTimer));
+  modelSlider.addEventListener('mouseleave', iniciarCarrosselAutomatico);
+  modelSlider.addEventListener('focusin', () => clearInterval(modelTimer));
+  modelSlider.addEventListener('focusout', iniciarCarrosselAutomatico);
+  window.addEventListener('resize', ajustarAlturaCarrossel);
+  showModel(0);
+  iniciarCarrosselAutomatico();
+}
+
+
+// ============================================================
+// PLAYER DE MÚSICA — ADICIONE SUAS FAIXAS AQUI
+// ============================================================
+
+// 1. Coloque os arquivos MP3 dentro da pasta "musicas".
+// 2. Adicione uma linha para cada faixa nesta lista.
+// Exemplo: { titulo: "Minha música", arquivo: "musicas/minha-musica.mp3" }
+const MUSICAS_FORJHA = [
+  // A primeira faixa é a música inicial do site.
+  { titulo: "Amy Winehouse — Back to Black", arquivo: "musicas/amy-winehouse-back-to-black.mp3" },
+  { titulo: "Guns N' Roses — November Rain", arquivo: "musicas/guns-n-roses-november-rain.mp3" },
+  { titulo: "Dança do Céu", arquivo: "musicas/danca-do-ceu.mp3" },
+  { titulo: "Aqua — Barbie Girl", arquivo: "musicas/aqua-barbie-girl.mp3" }
+];
+
+const forjhaAudio = document.getElementById('forjhaAudio');
+const musicTrackName = document.getElementById('musicTrackName');
+const musicTrackHint = document.getElementById('musicTrackHint');
+let currentMusic = 0;
+
+function carregarMusica(index, tocar = false) {
+  if (!forjhaAudio || !MUSICAS_FORJHA.length) return;
+  currentMusic = (index + MUSICAS_FORJHA.length) % MUSICAS_FORJHA.length;
+  const faixa = MUSICAS_FORJHA[currentMusic];
+  forjhaAudio.src = faixa.arquivo;
+  musicTrackName.textContent = faixa.titulo;
+  musicTrackHint.textContent = `Faixa ${currentMusic + 1} de ${MUSICAS_FORJHA.length}`;
+  if (tocar) {
+    const playPromise = forjhaAudio.play();
+    if (playPromise) playPromise.catch(() => {
+      musicTrackHint.textContent = 'O navegador bloqueou o início automático. Clique em reproduzir.';
+    });
+  }
+}
+
+if (forjhaAudio && MUSICAS_FORJHA.length) {
+  carregarMusica(0);
+  // Tenta iniciar com áudio assim que a página abre. O navegador pode exigir interação.
+  const tentativaAutoplay = forjhaAudio.play();
+  if (tentativaAutoplay) tentativaAutoplay.catch(() => {
+    if (musicTrackHint) musicTrackHint.textContent = 'Clique ou toque na página para iniciar Back to Black.';
+  });
+  // Se o navegador bloquear áudio automático, inicia a faixa na primeira interação do visitante.
+  const iniciarNaPrimeiraInteracao = () => {
+    forjhaAudio.play().catch(() => {
+      if (musicTrackHint) musicTrackHint.textContent = 'Clique em reproduzir para iniciar Back to Black.';
+    });
+    document.removeEventListener('pointerdown', iniciarNaPrimeiraInteracao);
+    document.removeEventListener('keydown', iniciarNaPrimeiraInteracao);
+  };
+  document.addEventListener('pointerdown', iniciarNaPrimeiraInteracao, { once: true });
+  document.addEventListener('keydown', iniciarNaPrimeiraInteracao, { once: true });
+  forjhaAudio.addEventListener('ended', () => {
+    if (MUSICAS_FORJHA.length > 1) carregarMusica(currentMusic + 1, true);
+  });
+  forjhaAudio.addEventListener('play', () => {
+    if (musicTrackHint) musicTrackHint.textContent = `Faixa ${currentMusic + 1} de ${MUSICAS_FORJHA.length}`;
+  });
+}
+
+
+// ============================================================
+// CARROSSEL DE AVALIAÇÕES DEMONSTRATIVAS
+const reviewsTrack = document.getElementById('reviewsTrack');
+if (reviewsTrack) {
+  const reviewStep = () => {
+    const card = reviewsTrack.querySelector('.review-slide');
+    return card ? card.getBoundingClientRect().width + 16 : 300;
+  };
+  document.querySelector('.reviews-prev')?.addEventListener('click', () => reviewsTrack.scrollBy({ left: -reviewStep(), behavior: 'smooth' }));
+  document.querySelector('.reviews-next')?.addEventListener('click', () => reviewsTrack.scrollBy({ left: reviewStep(), behavior: 'smooth' }));
+}
+
+// Animação sutil de entrada ao rolar a página (respeita redução de movimento).
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.section-title, #clientes-forjha .review-disclaimer, #clientes-forjha .reviews-carousel, .product-card').forEach(el => {
+    el.classList.add('scroll-reveal');
+    revealObserver.observe(el);
+  });
+}
+
+// ============================================================
+
+const DB = {
+
+  products: [
+
+    {
+      id: 1,
+      name: "Whey Protein Concentrado Pounch100% Pure900g",
+      cat: "suplementos",
+      price: 179.90,
+      oldPrice: 299.99,
+      rating: 4.9,
+      reviews: 342,
+      stock: 48,
+      badge: "promo",
+
+      // IMAGEM 1
+      imagem1: "img/WheyProteinConcentradoPounch100%Pure900g-img1.jpeg",
+
+      // IMAGEM 2
+      imagem2: "img/WheyProteinConcentradoPounch100%Pure900g-img2.jpeg",
+
+      desc: "O Whey Protein Concentrado Pouch 100% Pure da Integralmedica é uma escolha estratégica para você que deseja otimizar os resultados nos treinos e investir na performance. Este suplemento é composto pela proteína do soro de leite, oferecendo uma dose rica de 21 g de proteína, além de 9,7 g de aminoácidos essenciais e 4,6 g de BCAA, que são fundamentais para o desenvolvimento muscular."
+    },
+
+
+    {
+      id: 2,
+      name: "Camiseta Forjha Workout White Edition",
+      cat: "roupas",
+      price: 89.90,
+      oldPrice: null,
+      rating: 4.8,
+      reviews: 186,
+      stock: 120,
+      badge: "new",
+
+      // IMAGEM 1 = FRENTE
+      imagem1: "img/CamisetaForjhaWorkoutWhiteEdition-img1.jpeg",
+
+      // IMAGEM 2 = COSTAS
+      imagem2: "img/CamisetaForjhaWorkoutWhiteEdition-img2.jpeg",
+
+      desc: "Com proposta esportiva e acabamento pensado para o dia a dia, a camiseta oferece uma modelagem que valoriza a liberdade de movimentos e proporciona conforto durante os treinos. Seu design versátil permite utilizá-la tanto em atividades físicas quanto em momentos casuais. Disponível em P, M, G, GG."
+    },
+
+
+    {
+      id: 3,
+      name: "Glutamina 300g em pó",
+      cat: "suplementos",
+      price: 119.99,
+      oldPrice: null,
+      rating: 4.9,
+      reviews: 210,
+      stock: 85,
+      badge: "new",
+
+      // IMAGEM 1
+      imagem1: "img/Glutamina300gempo-img1.jpeg",
+
+      // IMAGEM 2 = COSTAS
+      imagem2: "img/Glutamina300gempo-img2.jpeg",
+
+      desc: "A glutamina é o aminoácido livre mais abundante no corpo humano e desempenha papel essencial na manutenção da saúde e da performance. Durante treinos intensos ou prolongados, os níveis naturais deste aminoácido podem cair drasticamente. Por isso, a suplementação se torna importante para fortalecer o sistema imunológico, manter a integridade intestinal e evitar a perda de massa muscular."
+    },
+
+
+    {
+      id: 4,
+      name: "Camiseta Forjha Workout Black Edition",
+      cat: "roupas",
+      price: 89.90,
+      oldPrice: null,
+      rating: 4.9,
+      reviews: 407,
+      stock: 89,
+      badge: "new",
+
+      // IMAGEM 1
+      imagem1: "img/CamisetaForjhaWorkoutBlackEdition-img1.jpeg",
+
+      // IMAGEM 2 = COSTAS
+      imagem2: "img/CamisetaForjhaWorkoutBlackEdition-img2.jpeg",
+
+      desc: "Com proposta esportiva e acabamento pensado para o dia a dia, a camiseta oferece uma modelagem que valoriza a liberdade de movimentos e proporciona conforto durante os treinos. Seu design versátil permite utilizá-la tanto em atividades físicas quanto em momentos casuais. P, M, G e GG."
+    },
+
+
+    {
+      id: 5,
+      name: "Creatina Creapure 300g",
+      cat: "suplementos",
+      price: 129.90,
+      oldPrice: 159.90,
+      rating: 5.0,
+      reviews: 512,
+      stock: 33,
+      badge: "promo",
+
+      // IMAGEM 1
+      imagem1: "img/CreatinaCreapure 300g-img1.jpeg",
+
+      // IMAGEM 2 
+      imagem2: "img/CreatinaCreapure 300g-img2.jpeg",
+
+
+      desc: "A Creatina 300g Creapure® Integralmedica é desenvolvida com matéria-prima de origem alemã reconhecida mundialmente pelo seu alto padrão de qualidade e pureza."
+    },
+
+
+    {
+      id: 6,
+      name: "Short Forjha Workout Black Edition",
+      cat: "roupas",
+      price: 79.90,
+      oldPrice: null,
+      rating: 4.7,
+      reviews: 158,
+      stock: 90,
+      badge: "new",
+
+      // IMAGEM 1
+      imagem1: "img/ShortForjhaWorkoutBlackEdition-img1.jpeg",
+
+       // IMAGEM 2 = COSTAS
+      imagem2: "img/ShortForjhaWorkoutBlackEdition-img2.jpeg",
+
+      desc: "Produzido com uma proposta de acabamento esportivo, o modelo valoriza a liberdade de movimentos e o conforto durante os exercícios. Seu visual leve e versátil é ideal para acompanhar diferentes atividades físicas e também compor looks casuais."
+    },
+
+
+    {
+      id: 7,
+      name: "Short Forjha Workout White Edition",
+      cat: "roupas",
+      price: 74.90,
+      oldPrice: null,
+      rating: 4.6,
+      reviews: 132,
+      stock: 95,
+      badge: "new",
+
+      // IMAGEM 1
+      imagem1: "img/ShortForjhaWorkoutWhiteEdition-img1.jpeg",
+
+       // IMAGEM 2 = COSTAS
+      imagem2: "img/ShortForjhaWorkoutWhiteEdition-img2.jpeg",
+
+      desc:"Produzido com uma proposta de acabamento esportivo, o modelo valoriza a liberdade de movimentos e o conforto durante os exercícios. Seu visual leve e versátil é ideal para acompanhar diferentes atividades físicas e também compor looks casuais."
+    },
+
+
+    {
+      id: 8,
+      name: "Protein Crisp Bar Ovomaltine 12 und",
+      cat: "suplementos",
+      price: 111.90,
+      oldPrice: 119.99,
+      rating: 4.7,
+      reviews: 294,
+      stock: 56,
+      badge: "promo",
+
+      // IMAGEM 1
+      imagem1: "img/Protein-Crisp-Bar-img1.jpeg",
+
+      // IMAGEM 2 
+      imagem2: "img/Protein-Crisp-Bar-img2.jpeg",
+
+      desc: "A Protein Crisp sabor Ovomaltine® é a mais nova barra de proteína da Integralmedica, desenvolvida para quem busca aliar nutrição, praticidade e muito sabor em um só produto. Combinando a alta qualidade de proteínas de Protein Crisp com o sabor e a crocância inconfundíveis de Ovomaltine, ela é perfeita para complementar a dieta com mais prazer e eficiência."
+    },
+
+
+    {
+      id: 9,
+      name: "Coqueteleira 2 doses vermelha tritan",
+      cat: "acessorios",
+      price: 49.90,
+      oldPrice: 87.99,
+      rating: 4.8,
+      reviews: 167,
+      stock: 25,
+      badge: "promo",
+
+      // IMAGEM 1
+      imagem1: "img/Coqueteleira2dosesvermelhatritan-img2.jpeg",
+
+      desc: "A coqueteleira Integralmedica 2 doses vermelha, é produzida com um material altamente tecnológico chamado TRITAN, que possui características semelhante ao vidro, porém com maior segurança e durabilidade. Entre seus principais benefícios, esse tipo de material não adere cheiros ou sabores. É uma peça leve e ideal para toda a sua suplementação e hidratação diária com maior segurança e durabilidade."
+    },
+
+
+    {
+      id: 10,
+      name: "Pré-Treino Prime MD 300g",
+      cat: "suplementos",
+      price: 122.90,
+      oldPrice: 129.99,
+      rating: 4.8,
+      reviews: 238,
+      stock: 41,
+      badge: "promo",
+
+      // IMAGEM 1
+      imagem1: "img/Pre-TreinoPrimeMD300g-img1.jpeg",
+
+      // IMAGEM 2
+      imagem2: "img/Pre-TreinoPrimeMD300g-img2.jpeg",
+
+      desc: "O Pré-Treino Prime MD Integralmedica é um Pré-Treino completo desenvolvido para quem busca mais energia, foco e desempenho físico durante o treino."
+    },
+
+
+    {
+      id: 11,
+      name: "Porta Cápsulas Vermelho",
+      cat: "acessorios",
+      price: 9.90,
+      oldPrice: 19.99,
+      rating: 4.7,
+      reviews: 154,
+      stock: 63,
+      badge: "new",
+
+      // IMAGEM 1
+      imagem1: "img/PortaCapsulasVermelho-img1.jpeg",
+
+      desc: "O Porta Cápsulas Vermelho é ideal para armazenar e transportar cápsulas de forma prática e organizada. Possui design compacto, é fácil de carregar e ajuda a manter seus suplementos sempre à mão."
+    },
+
+
+    {
+      id: 12,
+      name: "Squeeze 800 ml Vermelha Integral",
+      cat: "acessorios",
+      price: 13.90,
+      oldPrice: 17.99,
+      rating: 4.8,
+      reviews: 176,
+      stock: 22,
+      badge: "promo",
+
+      // IMAGEM 1
+      imagem1: "img/Squeeze800mlVermelhaIntegral-img1.jpeg",
+
+      desc: "Garrafa térmica com isolamento para água, whey, suplementos e hidratação durante o dia."
+    },
+
+    {
+      id: 13,
+      name: "Galão Body Size 2,2 L",
+      cat: "acessorios",
+      price: 22.90,
+      oldPrice: 24.99,
+      rating: 4.8,
+      reviews: 176,
+      stock: 22,
+      badge: "promo",
+
+      // IMAGEM 1
+      imagem1: "img/GalaoBodySize2,2L-img1.jpeg",
+
+      desc: "Uma boa hidratação é essencial para a saúde, o crescimento muscular e o bom desempenho em qualquer modalidade esportiva. O novo Galão Integralmedica vai ajudar você a se hidratar corretamente, não só durante os treinos, mas ao longo do dia. Com capacidade para 2,2 l, ele é altamente resistente, atóxico, possui alça ergonômica e design exclusivo, com a cor e a energia da linha Integralmedica. Alimente a força para seu desafio a cada gole."
+    },
+  ],
+
+
+  orders: [
+
+    {
+      id:"#4521",
+      client:"Lucas Oliveira",
+      product:"Whey Protein Gold",
+      value:"R$ 179,90",
+      date:"26/05/2025",
+      status:"pago"
+    },
+
+    {
+      id:"#4520",
+      client:"Mariana Costa",
+      product:" Legging Sculpt",
+      value:"R$ 119,90",
+      date:"26/05/2025",
+      status:"pago"
+    },
+
+    {
+      id:"#4519",
+      client:"Pedro Souza",
+      product:"Halteres Hex 20kg",
+      value:"R$ 399,90",
+      date:"25/05/2025",
+      status:"pendente"
+    },
+
+    {
+      id:"#4518",
+      client:"Fernanda Lima",
+      product:"Creatina 500g",
+      value:"R$ 129,90",
+      date:"25/05/2025",
+      status:"pago"
+    },
+
+    {
+      id:"#4517",
+      client:"Ricardo Alves",
+      product:"Pré-Treino Forjha 150g",
+      value:"R$ 49,90",
+      date:"24/05/2025",
+      status:"cancelado"
+    },
+
+    {
+      id:"#4516",
+      client:"Juliana Martins",
+      product:"Tênis Forjha",
+      value:"R$ 349,90",
+      date:"24/05/2025",
+      status:"pago"
+    },
+
+    {
+      id:"#4512",
+      client:"Juliana Martinsq",
+      product:"Tênis Forjhaq",
+      value:"R$ 349,90",
+      date:"24/05/2025",
+      status:"pago"
+    }
+
+  ]
+
+};
+
+
+
+// ============================================================
+// FUNÇÃO PARA PEGAR TODAS AS IMAGENS DO PRODUTO
+// ============================================================
+
+function getProductImages(product) {
+
+  const images = [];
+
+  if (product.imagem1) {
+    images.push(product.imagem1);
+  }
+
+  if (product.imagem2) {
+    images.push(product.imagem2);
+  }
+
+  if (product.imagem3) {
+    images.push(product.imagem3);
+  }
+
+  if (product.imagem4) {
+    images.push(product.imagem4);
+  }
+
+  if (product.imagem5) {
+    images.push(product.imagem5);
+  }
+
+  return images;
+
+}
+
+
+
+// ============================================================
+// ESTADO DO APP
+// ============================================================
+
+const categoryOrder = {
+
+  all: 0,
+  roupas: 2,
+  suplementos: 1,
+  acessorios: 3
+
+};
+
+
+let cart = [];
+
+// Lista de desejos persistente no navegador.
+let favorites = [];
+let showingFavorites = false;
+try {
+  const storedFavorites = JSON.parse(localStorage.getItem('forjhaFavorites') || '[]');
+  favorites = Array.isArray(storedFavorites) ? storedFavorites.map(Number).filter(Number.isFinite) : [];
+} catch (_) { favorites = []; }
+
+let filteredProducts =
+  [...DB.products];
+
+let activeCategory =
+  'all';
+
+let activeSort =
+  'default';
+
+let searchQuery =
+  '';
+
+
+
+// ============================================================
+// RENDER PRODUTOS
+// ============================================================
+
+function renderProducts() {
+
+  const grid =
+    document.getElementById('productsGrid');
+
+  const noRes =
+    document.getElementById('noResults');
+
+  const count =
+    document.getElementById('productCount');
+
+  if (!grid || !noRes || !count) {
+    return;
+  }
+
+
+  let list =
+    [...DB.products];
+
+
+  if (activeCategory !== 'all') {
+
+    list =
+      list.filter(
+        p => p.cat === activeCategory
+      );
+
+  }
+
+
+  if (searchQuery) {
+
+    const q =
+      searchQuery.toLowerCase();
+
+    list =
+      list.filter(p =>
+
+        p.name
+          .toLowerCase()
+          .includes(q)
+
+        ||
+
+        p.cat
+          .toLowerCase()
+          .includes(q)
+
+      );
+
+  }
+
+
+  if (activeSort === 'price-asc') {
+
+    list.sort(
+      (a,b) => a.price - b.price
+    );
+
+  }
+
+  else if (activeSort === 'price-desc') {
+
+    list.sort(
+      (a,b) => b.price - a.price
+    );
+
+  }
+
+  else if (activeSort === 'name') {
+
+    list.sort(
+      (a,b) => a.name.localeCompare(b.name)
+    );
+
+  }
+
+  else if (activeSort === 'rating') {
+
+    list.sort(
+      (a,b) => b.rating - a.rating
+    );
+
+  }
+
+  else {
+
+    list.sort((a,b) => {
+
+      const diff =
+        (categoryOrder[a.cat] ?? 99) -
+        (categoryOrder[b.cat] ?? 99);
+
+      return diff !== 0
+        ? diff
+        : a.id - b.id;
+
+    });
+
+  }
+
+
+  if (showingFavorites) {
+    list = list.filter(p => favorites.includes(Number(p.id)));
+  }
+
+  filteredProducts =
+    list;
+
+  updateFavoritesUI();
+
+  count.textContent =
+    `${list.length} produto${list.length !== 1 ? 's' : ''} encontrado${list.length !== 1 ? 's' : ''}`;
+
+
+  if (list.length === 0) {
+
+    grid.innerHTML = '';
+
+    noRes.classList.remove('d-none');
+
+    return;
+
+  }
+
+
+  noRes.classList.add('d-none');
+
+
+  grid.innerHTML =
+    list.map(p => {
+
+      const images =
+        getProductImages(p);
+
+      const mainImage =
+        images[0] || '';
+
+
+      return `
+
+        <div class="col-sm-6 col-lg-4 col-xl-3">
+
+          <div class="product-card">
+
+
+            <div class="product-img-wrap"
+                 style="cursor:pointer;"
+                 onclick="openModal(${p.id})">
+
+              <img
+                src="${mainImage}"
+                alt="${p.name}"
+                loading="lazy"
+              />
+
+              <button type="button" class="product-favorite ${favorites.includes(Number(p.id)) ? 'is-favorite' : ''}"
+                      aria-label="${favorites.includes(Number(p.id)) ? 'Remover dos' : 'Adicionar aos'} favoritos"
+                      aria-pressed="${favorites.includes(Number(p.id))}"
+                      onclick="toggleFavorite(${p.id}, event)">
+                <i class="bi ${favorites.includes(Number(p.id)) ? 'bi-heart-fill' : 'bi-heart'}"></i>
+              </button>
+
+              <button type="button" class="product-compare ${compareItems.includes(Number(p.id)) ? 'is-selected' : ''}"
+                      aria-label="Comparar ${p.name}" aria-pressed="${compareItems.includes(Number(p.id))}"
+                      onclick="toggleCompare(${p.id}, event)" title="Adicionar à comparação">
+                <i class="bi bi-arrow-left-right"></i>
+              </button>
+
+              ${p.badge === 'promo'
+                ? `
+                  <span class="badge-promo">
+                    Promo
+                  </span>
+                `
+                : ''}
+
+
+              ${p.badge === 'new'
+                ? `
+                  <span class="badge-new">
+                    Novo
+                  </span>
+                `
+                : ''}
+
+            </div>
+
+
+            <div class="product-body">
+
+
+              <div class="product-cat">
+                ${catLabel(p.cat)}
+              </div>
+
+
+              <div class="product-name"
+                   style="cursor:pointer;"
+                   onclick="openModal(${p.id})">
+
+                ${p.name}
+
+              </div>
+
+
+              <div class="product-stars">
+
+                ${'★'.repeat(Math.round(p.rating))}
+                ${'☆'.repeat(5-Math.round(p.rating))}
+
+                <span class="count">
+                  (${p.reviews})
+                </span>
+
+              </div>
+
+
+              <div class="product-price-row">
+
+                <span class="product-price">
+
+                  R$
+                  ${p.price.toFixed(2).replace('.',',')}
+
+                </span>
+
+
+                ${p.oldPrice
+
+                  ? `
+                    <span class="product-price-old">
+                      R$
+                      ${p.oldPrice.toFixed(2).replace('.',',')}
+                    </span>
+                  `
+
+                  : ''
+
+                }
+
+              </div>
+
+
+              ${p.stock <= 10
+
+                ? `
+                  <p style="font-size:.75rem;color:#f59e0b;margin-bottom:.6rem;">
+
+                    <i class="bi bi-exclamation-triangle me-1"></i>
+
+                    Apenas ${p.stock} em estoque
+
+                  </p>
+                `
+
+                : ''
+
+              }
+
+
+              <div class="product-actions">
+                <button type="button" class="btn btn-add" onclick="addToCart(${p.id})">
+                  <i class="bi bi-bag-plus me-1"></i>Adicionar
+                </button>
+                <button type="button" class="btn btn-product-view" onclick="openModal(${p.id})" aria-label="Ver detalhes de ${p.name}">
+                  <i class="bi bi-arrow-up-right"></i>
+                </button>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }).join('');
+
+}
+
+
+
+// ============================================================
+// FAVORITOS / LISTA DE DESEJOS
+// ============================================================
+function updateFavoritesUI() {
+  const count = document.getElementById('favoritesCount');
+  const button = document.getElementById('favoritesFilter');
+  if (count) count.textContent = String(favorites.length);
+  if (button) {
+    button.classList.toggle('active', showingFavorites);
+    button.setAttribute('aria-pressed', String(showingFavorites));
+    button.innerHTML = `<i class="bi ${showingFavorites ? 'bi-heart-fill' : 'bi-heart'} me-2"></i>${showingFavorites ? 'Ver todos' : 'Ver favoritos'} <span class="favorites-count">${favorites.length}</span>`;
+  }
+}
+
+function toggleFavoritesFilter() {
+  showingFavorites = !showingFavorites;
+  renderProducts();
+  if (showingFavorites && favorites.length === 0) {
+    showToast('<i class="bi bi-heart me-2"></i>Você ainda não salvou produtos nos favoritos.');
+  }
+}
+
+function toggleFavorite(id, event) {
+  if (event) { event.preventDefault(); event.stopPropagation(); }
+  const numericId = Number(id);
+  const exists = favorites.includes(numericId);
+  favorites = exists ? favorites.filter(item => item !== numericId) : [...favorites, numericId];
+  localStorage.setItem('forjhaFavorites', JSON.stringify(favorites));
+  updateFavoritesUI();
+  if (showingFavorites && exists) renderProducts();
+  else {
+    const button = event?.currentTarget;
+    if (button) {
+      button.classList.toggle('is-favorite', !exists);
+      button.setAttribute('aria-pressed', String(!exists));
+      button.setAttribute('aria-label', exists ? 'Adicionar aos favoritos' : 'Remover dos favoritos');
+      const icon = button.querySelector('i');
+      if (icon) icon.className = `bi ${exists ? 'bi-heart' : 'bi-heart-fill'}`;
+    }
+  }
+  const product = DB.products.find(item => Number(item.id) === numericId);
+  showToast(`<i class="bi ${exists ? 'bi-heartbreak' : 'bi-heart-fill'} me-2"></i>${exists ? 'Removido dos favoritos' : 'Adicionado aos favoritos'}${product ? `: ${product.name}` : ''}`);
+}
+
+// ============================================================
+// CATEGORIA
+// ============================================================
+
+function catLabel(cat) {
+
+  const map = {
+
+    suplementos:'Suplementos',
+    roupas:'Roupas',
+    acessorios:'Acessórios'
+
+  };
+
+  return map[cat] || cat;
+
+}
+
+
+
+// ============================================================
+// FILTROS
+// ============================================================
+
+function setCategory(cat, el) {
+
+  activeCategory =
+    cat;
+
+
+  document
+    .querySelectorAll('#categoryFilter .cat-card')
+    .forEach(c =>
+      c.classList.remove('active')
+    );
+
+
+  if (el) {
+    el.classList.add('active');
+  }
+
+
+  renderProducts();
+
+}
+
+
+function filterProducts() {
+
+  const input1 =
+    document.getElementById('searchInput');
+
+  const input2 =
+    document.getElementById('searchInput2');
+
+
+  const v1 =
+    input1 ? input1.value : '';
+
+  const v2 =
+    input2 ? input2.value : '';
+
+
+  searchQuery =
+    v1 || v2;
+
+
+  renderProducts();
+
+}
+
+
+function sortProducts() {
+
+  const select =
+    document.getElementById('sortSelect');
+
+  if (!select) return;
+
+
+  activeSort =
+    select.value;
+
+
+  renderProducts();
+
+}
+
+
+
+// ============================================================
+// GALERIA DE IMAGENS DO PRODUTO
+// ============================================================
+
+let currentProductImages = [];
+
+let currentProductImageIndex = 0;
+
+
+function changeProductImage(index) {
+
+  if (!currentProductImages.length) {
+    return;
+  }
+
+
+  if (!currentProductImages[index]) {
+    return;
+  }
+
+
+  currentProductImageIndex =
+    index;
+
+
+  const mainImage =
+    document.getElementById('mainProductImage');
+
+
+  if (mainImage) {
+
+    mainImage.src =
+      currentProductImages[index];
+
+  }
+
+
+  document
+    .querySelectorAll('.product-thumbnail')
+    .forEach((thumb, i) => {
+
+      if (i === index) {
+
+        thumb.style.borderColor =
+          'var(--forjha-orange)';
+
+        thumb.style.opacity =
+          '1';
+
+      }
+
+      else {
+
+        thumb.style.borderColor =
+          'var(--forjha-border)';
+
+        thumb.style.opacity =
+          '0.65';
+
+      }
+
+    });
+
+}
+
+
+
+// ============================================================
+// MODAL DE PRODUTO
+// ============================================================
+
+function openModal(id) {
+
+  const p =
+    DB.products.find(
+      x => x.id === id
+    );
+
+
+  if (!p) return;
+
+
+  const discount =
+    p.oldPrice
+      ? Math.round(
+          (1 - p.price / p.oldPrice) * 100
+        )
+      : null;
+
+
+  currentProductImages =
+    getProductImages(p);
+
+
+  if (!currentProductImages.length) {
+
+    currentProductImages = [
+      'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&q=80'
+    ];
+
+  }
+
+
+  currentProductImageIndex =
+    0;
+
+
+  let thumbnails =
+    '';
+
+
+  if (currentProductImages.length > 1) {
+
+    thumbnails = `
+
+      <div style="
+        display:flex;
+        gap:.6rem;
+        margin-top:.8rem;
+        flex-wrap:wrap;
+      ">
+
+
+        ${currentProductImages.map(
+          (image, index) => `
+
+            <button
+              type="button"
+              class="product-thumbnail"
+              onclick="changeProductImage(${index})"
+
+              style="
+                width:65px;
+                height:65px;
+                padding:3px;
+                border:2px solid ${index === 0
+                  ? 'var(--forjha-orange)'
+                  : 'var(--forjha-border)'};
+                background:var(--forjha-dark);
+                border-radius:7px;
+                cursor:pointer;
+                overflow:hidden;
+                opacity:${index === 0 ? '1' : '0.65'};
+                transition:all .2s;
+              "
+            >
+
+              <img
+                src="${image}"
+                alt="${p.name} - imagem ${index + 1}"
+                style="
+                  width:100%;
+                  height:100%;
+                  object-fit:cover;
+                  border-radius:4px;
+                "
+              />
+
+            </button>
+
+          `
+        ).join('')}
+
+      </div>
+
+    `;
+
+  }
+
+
+  document.getElementById(
+    'modalContent'
+  ).innerHTML = `
+
+
+    <div class="col-md-5">
+
+
+      <img
+        src="${currentProductImages[0]}"
+        alt="${p.name}"
+        id="mainProductImage"
+        class="modal-product-img"
+      />
+
+
+      ${thumbnails}
+
+
+    </div>
+
+
+    <div class="col-md-7">
+
+
+      <span style="
+        font-family:'Barlow Condensed';
+        letter-spacing:.18em;
+        font-size:.75rem;
+        text-transform:uppercase;
+        color:var(--forjha-orange);
+      ">
+
+        ${catLabel(p.cat)}
+
+      </span>
+
+
+      <h3 style="
+        font-family:'Barlow Condensed';
+        font-weight:700;
+        font-size:1.5rem;
+        margin:.5rem 0 .8rem;
+        color:var(--forjha-white);
+      ">
+
+        ${p.name}
+
+      </h3>
+
+
+      <div style="
+        color:var(--forjha-orange);
+        font-size:.95rem;
+        margin-bottom:.8rem;
+      ">
+
+        ${'★'.repeat(Math.round(p.rating))}
+        ${'☆'.repeat(5-Math.round(p.rating))}
+
+
+        <span style="
+          color:var(--forjha-gray);
+          font-size:.8rem;
+          margin-left:6px;
+        ">
+
+          ${p.rating}
+          (${p.reviews} avaliações)
+
+        </span>
+
+      </div>
+<div class="product-price-row mb-3">
+
+
+        <span class="product-price"
+              style="font-size:2rem;">
+
+          R$
+          ${p.price.toFixed(2).replace('.',',')}
+
+        </span>
+
+
+        ${p.oldPrice
+
+          ? `
+            <span class="product-price-old">
+
+              R$
+              ${p.oldPrice.toFixed(2).replace('.',',')}
+
+            </span>
+          `
+
+          : ''
+
+        }
+
+
+        ${discount
+
+          ? `
+            <span style="
+              background:var(--forjha-orange);
+              color:#fff;
+              font-family:'Barlow Condensed';
+              font-weight:700;
+              font-size:.78rem;
+              padding:3px 8px;
+              border-radius:4px;
+            ">
+
+              -${discount}%
+
+            </span>
+          `
+
+          : ''
+
+        }
+
+      </div>
+
+
+      <div style="
+        font-size:.8rem;
+        color:${p.stock > 10
+          ? 'var(--forjha-gray)'
+          : '#f59e0b'};
+        margin-bottom:1.2rem;
+      ">
+
+        <i class="bi bi-${p.stock > 10
+          ? 'check-circle'
+          : 'exclamation-triangle'} me-1"></i>
+
+
+        ${p.stock > 10
+
+          ? `${p.stock} em estoque`
+
+          : `Apenas ${p.stock} em estoque — corra!`
+
+        }
+
+      </div>
+
+
+      ${p.cat === 'roupas'
+
+        ? `
+
+          <div style="margin-bottom:1rem;">
+
+            <label style="
+              font-size:.8rem;
+              color:var(--forjha-gray);
+              text-transform:uppercase;
+              margin-bottom:.5rem;
+              display:block;
+            ">
+
+              Tamanho
+
+            </label>
+
+
+            <div style="
+              display:flex;
+              gap:.5rem;
+              flex-wrap:wrap;
+            ">
+
+
+              ${['PP','P','M','G','GG'].map(size => `
+
+                <button
+                  class="size-btn"
+                  onclick="selectSize('${size}')"
+                  data-size="${size}"
+
+                  style="
+                    padding:.4rem .8rem;
+                    border:1.5px solid var(--forjha-border);
+                    background:var(--forjha-dark);
+                    color:var(--forjha-gray);
+                    border-radius:4px;
+                    cursor:pointer;
+                    font-size:.85rem;
+                    font-weight:600;
+                    transition:all .2s;
+                  "
+                >
+
+                  ${size}
+
+                </button>
+
+              `).join('')}
+
+
+            </div>
+
+
+            <input
+              type="hidden"
+              id="modalSize"
+              value=""
+            />
+
+          </div>
+
+        `
+
+        : ''
+
+      }
+
+
+      <div style="margin-bottom:1rem;">
+
+        <label style="
+          font-size:.8rem;
+          color:var(--forjha-gray);
+          text-transform:uppercase;
+          margin-bottom:.5rem;
+          display:block;
+        ">
+
+          Quantidade
+
+        </label>
+
+
+        <div style="
+          display:flex;
+          gap:.5rem;
+          align-items:center;
+        ">
+
+
+          <button
+            class="btn btn-outline-forjha"
+            style="padding:.3rem .6rem;font-size:.8rem;"
+            onclick="changeModalQty(-1)">
+
+            −
+
+          </button>
+
+
+          <input
+            type="number"
+            id="modalQty"
+            value="1"
+            min="1"
+            max="${p.stock}"
+
+            style="
+              width:50px;
+              text-align:center;
+              background:var(--forjha-dark);
+              border:1px solid var(--forjha-border);
+              color:var(--forjha-white);
+              padding:.4rem;
+              border-radius:4px;
+              font-size:.9rem;
+            ">
+
+
+          <button
+            class="btn btn-outline-forjha"
+            style="padding:.3rem .6rem;font-size:.8rem;"
+            onclick="changeModalQty(1)">
+
+            +
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+
+      <div class="d-flex gap-2">
+
+
+        <button
+          class="btn btn-primary-forjha flex-grow-1"
+          onclick="addToCartFromModal(${p.id}, this)"
+          style="transition:all .3s;">
+
+          <i class="bi bi-bag-plus me-2"></i>
+
+          Adicionar ao Carrinho
+
+        </button>
+
+
+        <button
+          class="btn btn-outline-forjha"
+          onclick="wishlist(${p.id})"
+          title="Adicionar à lista de desejos">
+
+          <i class="bi bi-heart"></i>
+
+        </button>
+
+
+      </div>
+
+
+      <div class="mt-3 p-2 rounded-3"
+           style="
+             background:var(--forjha-dark);
+             border:1px solid var(--forjha-border);
+           ">
+
+        <p style="
+          margin:0;
+          font-size:.8rem;
+          color:var(--forjha-gray);
+        ">
+
+          <i class="bi bi-truck me-2"></i>
+
+          <strong>Frete grátis</strong>
+          em compras acima de R$ 299
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  `;
+
+
+  new bootstrap.Modal(
+    document.getElementById('productModal')
+  ).show();
+
+}
+
+
+
+function wishlist(id) {
+
+  const p =
+    DB.products.find(
+      x => x.id === id
+    );
+
+
+  if (!p) return;
+
+
+  showToast(
+    `<i class="bi bi-heart-fill text-danger me-2"></i>
+     "${p.name}" adicionado à lista de desejos!`
+  );
+
+}
+
+
+
+// ============================================================
+// CARRINHO
+// ============================================================
+
+function addToCart(id) {
+
+  const p =
+    DB.products.find(
+      x => x.id === id
+    );
+
+
+  if (!p) return;
+
+
+  const existing =
+    cart.find(
+      c => c.id === id
+    );
+
+
+  if (existing) {
+
+    if (existing.qty >= p.stock) {
+
+      showToast(
+        `<i class="bi bi-exclamation-circle me-2"
+        style="color:var(--forjha-orange);"></i>
+        Estoque máximo atingido!`
+      );
+
+      return;
+
+    }
+
+
+    existing.qty++;
+
+  }
+
+  else {
+
+    cart.push({
+
+      ...p,
+
+      qty:1
+
+    });
+
+  }
+
+
+  renderCart();
+
+  updateAdminStats();
+
+  saveCart();
+
+
+  showToast(
+    `<i class="bi bi-check-circle-fill me-2"
+     style="color:#4ade80;"></i>
+     "${p.name}" adicionado ao carrinho!`
+  );
+
+}
+
+
+
+function removeFromCart(id) {
+
+  cart =
+    cart.filter(
+      c => c.id !== id
+    );
+
+
+  renderCart();
+
+  updateAdminStats();
+
+  saveCart();
+
+}
+
+
+
+function removeFromCartByKey(key) {
+
+  cart =
+    cart.filter(
+      c => (c.cartKey || c.id) !== key
+    );
+
+
+  renderCart();
+
+  updateAdminStats();
+
+  saveCart();
+
+}
+
+
+
+function changeQty(id, delta) {
+
+  const item =
+    cart.find(
+      c => c.id === id
+    );
+
+
+  if (!item) return;
+
+
+  item.qty += delta;
+
+
+  if (item.qty <= 0) {
+
+    removeFromCart(id);
+
+  }
+
+  else {
+
+    renderCart();
+
+  }
+
+
+  updateAdminStats();
+
+  saveCart();
+
+}
+
+
+
+function changeQtyCart(key, delta) {
+
+  const item =
+    cart.find(
+      c => (c.cartKey || c.id) === key
+    );
+
+
+  if (!item) return;
+
+
+  item.qty += delta;
+
+
+  if (item.qty <= 0) {
+
+    removeFromCartByKey(key);
+
+  }
+
+  else {
+
+    renderCart();
+
+  }
+
+
+  updateAdminStats();
+
+  saveCart();
+
+}
+
+
+
+function clearCart() {
+
+  cart = [];
+
+
+  renderCart();
+
+  updateAdminStats();
+
+  saveCart();
+
+}
+
+
+
+// ============================================================
+// RENDER CARRINHO
+// ============================================================
+
+function renderCart() {
+
+  const container =
+    document.getElementById('cartItems');
+
+  const footer =
+    document.getElementById('cartFooter');
+
+  const countEl =
+    document.getElementById('cartCount');
+
+
+  if (!container || !footer || !countEl) {
+    return;
+  }
+
+
+  const totalItems =
+    cart.reduce(
+      (s,c) => s + c.qty,
+      0
+    );
+
+
+  const totalVal =
+    cart.reduce(
+      (s,c) => s + c.price * c.qty,
+      0
+    );
+
+
+  countEl.textContent =
+    totalItems;
+
+
+  if (cart.length === 0) {
+
+    container.innerHTML = `
+
+      <div class="empty-cart">
+
+        <i class="bi bi-bag-x"></i>
+
+        <p>
+          Seu carrinho está vazio.
+        </p>
+
+        <small>
+          Adicione produtos para começar!
+        </small>
+
+      </div>
+
+    `;
+
+
+    footer.classList.add('d-none');
+
+    return;
+
+  }
+
+
+  footer.classList.remove('d-none');
+
+
+  document.getElementById(
+    'cartTotal'
+  ).textContent =
+    `R$ ${totalVal.toFixed(2).replace('.',',')}`;
+
+
+  container.innerHTML =
+
+    cart.map(item => {
+
+      const images =
+        getProductImages(item);
+
+      const cartImage =
+        images[0] || '';
+
+
+      return `
+
+        <div class="cart-item">
+
+
+          <img
+            src="${cartImage}"
+            class="cart-item-img"
+            alt="${item.name}"
+          />
+
+
+          <div class="flex-grow-1">
+
+
+            <div class="cart-item-name">
+
+              ${item.name}
+
+
+              ${item.size
+
+                ? `
+                  <span style="
+                    color:var(--forjha-orange);
+                    font-size:.8rem;
+                  ">
+
+                    (${item.size})
+
+                  </span>
+                `
+
+                : ''
+
+              }
+
+            </div>
+
+
+            <div class="cart-item-price">
+
+              R$
+              ${(item.price * item.qty)
+                .toFixed(2)
+                .replace('.',',')}
+
+            </div>
+
+
+            <div class="d-flex align-items-center gap-2 mt-1">
+
+
+              <button
+                class="cart-qty-btn"
+                onclick="changeQtyCart('${item.cartKey || item.id}', -1)">
+
+                −
+
+              </button>
+
+
+              <span class="cart-qty">
+
+                ${item.qty}
+
+              </span>
+
+
+              <button
+                class="cart-qty-btn"
+                onclick="changeQtyCart('${item.cartKey || item.id}', 1)">
+
+                +
+
+              </button>
+
+
+            </div>
+
+
+          </div>
+
+
+          <button
+            class="btn p-0"
+            style="color:var(--forjha-gray);"
+            onclick="removeFromCartByKey('${item.cartKey || item.id}')">
+
+            <i class="bi bi-x-lg"></i>
+
+          </button>
+
+
+        </div>
+
+      `;
+
+    }).join('');
+
+}
+
+
+
+// ============================================================
+// CHECKOUT
+// ============================================================
+
+function checkout() {
+
+  const totalVal =
+    cart.reduce(
+      (s,c) => s + c.price * c.qty,
+      0
+    );
+
+
+  document.getElementById(
+    'chkTotal'
+  ).textContent =
+    `R$ ${totalVal.toFixed(2).replace('.',',')}`;
+
+
+  new bootstrap.Modal(
+    document.getElementById('checkoutModal')
+  ).show();
+
+
+  generatePixQrCode();
+
+}
+
+
+
+function updatePaymentMethod() {
+
+  const pixSelected =
+    document.getElementById('payPix').checked;
+
+
+  const pixContainer =
+    document.getElementById('pixQrContainer');
+
+
+  if (!pixContainer) return;
+
+
+  if (pixSelected) {
+
+    pixContainer.style.display =
+      'block';
+
+    generatePixQrCode();
+
+  }
+
+  else {
+
+    pixContainer.style.display =
+      'none';
+
+  }
+
+}
+
+
+
+function generatePixQrCode() {
+
+  const container =
+    document.getElementById('qrcodeContainer');
+
+
+  if (
+    !container ||
+    typeof QRCode === 'undefined'
+  ) {
+    return;
+  }
+
+
+  const pixCode =
+    `00020126580014br.gov.bcb.pix0136${Math.random().toString(36).substr(2,36).toUpperCase()}5204000053039865802BR5913FORJHA6009BATATAIS62070503***63047FA3`;
+
+
+  container.innerHTML =
+    '';
+
+
+  new QRCode(
+    container,
+    {
+      text:pixCode,
+      width:200,
+      height:200,
+      colorDark:'#000000',
+      colorLight:'#ffffff',
+      correctLevel:QRCode.CorrectLevel.H
+    }
+  );
+
+}
+
+
+
+// ============================================================
+// PEDIDO
+// ============================================================
+
+function placeOrder() {
+
+  const name =
+    document.getElementById(
+      'chkName'
+    ).value.trim();
+
+
+  const email =
+    document.getElementById(
+      'chkEmail'
+    ).value.trim();
+
+
+  if (!name || !email) {
+
+    showToast(
+      `<i class="bi bi-exclamation-circle me-2"
+      style="color:var(--forjha-orange);"></i>
+      Preencha nome e e-mail!`
+    );
+
+    return;
+
+  }
+
+
+  const payment =
+    document.querySelector(
+      'input[name="payment"]:checked'
+    ).value;
+
+
+  const totalVal =
+    cart.reduce(
+      (s,c) => s + c.price * c.qty,
+      0
+    );
+
+
+  const id =
+    '#' +
+    (
+      4521 +
+      DB.orders.length +
+      1
+    );
+
+
+  const mainProd =
+    cart[0]?.name ||
+    'Múltiplos';
+
+
+  if (payment === 'pix') {
+
+    window.pendingOrder = {
+
+      id,
+
+      name,
+
+      email,
+
+      payment,
+
+      mainProd,
+
+      totalVal,
+
+      totalFormatted:
+        `R$ ${totalVal.toFixed(2).replace('.',',')}`
+
+    };
+
+
+    bootstrap.Modal
+      .getInstance(
+        document.getElementById(
+          'checkoutModal'
+        )
+      )
+      .hide();
+
+
+    showPixPaymentPage(
+      id,
+      totalVal
+        .toFixed(2)
+        .replace('.',',')
+    );
+
+
+    return;
+
+  }
+
+
+  DB.orders.unshift({
+
+    id,
+
+    client:name,
+
+    product:mainProd,
+
+    value:
+      `R$ ${totalVal.toFixed(2).replace('.',',')}`,
+
+    date:
+      new Date().toLocaleDateString('pt-BR'),
+
+    status:
+      'pago'
+
+  });
+
+
+  bootstrap.Modal
+    .getInstance(
+      document.getElementById(
+        'checkoutModal'
+      )
+    )
+    .hide();
+
+
+  bootstrap.Offcanvas
+    .getInstance(
+      document.getElementById(
+        'cartOffcanvas'
+      )
+    )?.hide();
+
+
+  cart = [];
+
+
+  renderCart();
+
+  renderOrders();
+
+  updateAdminStats();
+
+  saveCart();
+
+
+  showToast(
+    `<i class="bi bi-check-circle-fill me-2"
+     style="color:#4ade80;"></i>
+     Pedido ${id} realizado com sucesso via ${payment}! 🎉`
+  );
+
+}
+
+
+
+// ============================================================
+// PAGAMENTO PIX
+// ============================================================
+
+let pixTimerInterval = null;
+
+
+function showPixPaymentPage(
+  orderId,
+  totalValue
+) {
+
+  document.getElementById(
+    'pixOrderId'
+  ).textContent =
+    orderId;
+
+
+  document.getElementById(
+    'pixOrderValue'
+  ).textContent =
+    `R$ ${totalValue}`;
+
+
+  const pixCode =
+    `00020126580014br.gov.bcb.pix0136${Math.random().toString(36).substr(2,36).toUpperCase()}5204000053039865802BR5913FORJHA6009BATATAIS62070503***63047FA3`;
+
+
+  const container =
+    document.getElementById(
+      'pixQrCodeLarge'
+    );
+
+
+  container.innerHTML =
+    '';
+
+
+  new QRCode(
+    container,
+    {
+      text:pixCode,
+      width:280,
+      height:280,
+      colorDark:'#000000',
+      colorLight:'#ffffff',
+      correctLevel:QRCode.CorrectLevel.H
+    }
+  );
+
+
+  startPixTimer(300);
+
+
+  new bootstrap.Modal(
+    document.getElementById(
+      'pixPaymentModal'
+    )
+  ).show();
+
+}
+
+
+
+function startPixTimer(seconds) {
+
+  if (pixTimerInterval) {
+
+    clearInterval(
+      pixTimerInterval
+    );
+
+  }
+
+
+  let remaining =
+    seconds;
+
+
+  function updateTimer() {
+
+    const mins =
+      Math.floor(
+        remaining / 60
+      );
+
+
+    const secs =
+      remaining % 60;
+
+
+    document.getElementById(
+      'pixTimer'
+    ).textContent =
+      `${mins}:${secs.toString().padStart(2,'0')}`;
+
+
+    if (remaining <= 0) {
+
+      clearInterval(
+        pixTimerInterval
+      );
+
+
+      showToast(
+        `<i class="bi bi-exclamation-triangle me-2"
+         style="color:#f59e0b;"></i>
+         QR Code PIX expirado!`
+      );
+
+
+      bootstrap.Modal
+        .getInstance(
+          document.getElementById(
+            'pixPaymentModal'
+          )
+        )
+        ?.hide();
+
+
+      return;
+
+    }
+
+
+    remaining--;
+
+  }
+
+
+  updateTimer();
+
+
+  pixTimerInterval =
+    setInterval(
+      updateTimer,
+      1000
+    );
+
+}
+
+
+
+function confirmPixPayment() {
+
+  if (!window.pendingOrder) {
+    return;
+  }
+
+
+  const order =
+    window.pendingOrder;
+
+
+  DB.orders.unshift({
+
+    id:order.id,
+
+    client:order.name,
+
+    product:order.mainProd,
+
+    value:order.totalFormatted,
+
+    date:
+      new Date().toLocaleDateString('pt-BR'),
+
+    status:'pago'
+
+  });
+
+
+  bootstrap.Modal
+    .getInstance(
+      document.getElementById(
+        'pixPaymentModal'
+      )
+    )
+    ?.hide();
+
+
+  bootstrap.Offcanvas
+    .getInstance(
+      document.getElementById(
+        'cartOffcanvas'
+      )
+    )?.hide();
+
+
+  if (pixTimerInterval) {
+
+    clearInterval(
+      pixTimerInterval
+    );
+
+  }
+
+
+  cart = [];
+
+
+  renderCart();
+
+  saveCart();
+
+  renderOrders();
+
+  updateAdminStats();
+
+
+  showToast(
+    `<i class="bi bi-check-circle-fill me-2"
+     style="color:#4ade80;"></i>
+     Pedido ${order.id} confirmado!
+     Pagamento recebido! 🎉`
+  );
+
+
+  window.pendingOrder =
+    null;
+
+}
+
+
+
+function cancelPixPayment() {
+
+  if (pixTimerInterval) {
+
+    clearInterval(
+      pixTimerInterval
+    );
+
+  }
+
+
+  window.pendingOrder =
+    null;
+
+
+  showToast(
+    `<i class="bi bi-info-circle me-2"
+     style="color:var(--forjha-orange);"></i>
+     Pagamento cancelado.
+     Você pode tentar novamente.`
+  );
+
+}
+
+
+
+// ============================================================
+// CARRINHO PERSISTENTE
+// ============================================================
+
+function saveCart() {
+
+  localStorage.setItem(
+    'forjhaCart',
+    JSON.stringify(cart)
+  );
+
+}
+
+
+
+function loadCart() {
+
+  const saved =
+    localStorage.getItem(
+      'forjhaCart'
+    );
+
+
+  if (saved) {
+
+    try {
+
+      cart =
+        JSON.parse(saved);
+
+    }
+
+    catch (error) {
+
+      cart = [];
+
+    }
+
+
+    renderCart();
+
+  }
+
+}
+
+
+
+// ============================================================
+// USUÁRIO
+// ============================================================
+
+function initUser() {
+
+  const user =
+    JSON.parse(
+      localStorage.getItem(
+        'forjhaSession'
+      ) || 'null'
+    );
+
+
+  if (user) {
+
+    const userName =
+      user.name
+        ? user.name.split(' ')[0]
+        : 'Usuário';
+
+
+    const display =
+      document.getElementById(
+        'userNameDisplay'
+      );
+
+
+    if (display) {
+
+      display.textContent =
+        userName;
+
+    }
+
+  }
+
+}
+
+
+
+function logout() {
+
+  localStorage.removeItem(
+    'forjhaSession'
+  );
+
+  localStorage.removeItem(
+    'forjhaCart'
+  );
+
+
+  window.location.href =
+    'login.html';
+
+}
+
+
+
+// ============================================================
+// MODAL QUANTIDADE
+// ============================================================
+
+let modalQty =
+  1;
+
+
+function changeModalQty(delta) {
+
+  const input =
+    document.getElementById(
+      'modalQty'
+    );
+
+
+  if (!input) return;
+
+
+  const current =
+    parseInt(input.value) || 1;
+
+
+  const max =
+    parseInt(input.max) || 999999;
+
+
+  const newVal =
+    Math.min(
+      max,
+      Math.max(
+        1,
+        current + delta
+      )
+    );
+
+
+  input.value =
+    newVal;
+
+
+  modalQty =
+    newVal;
+
+}
+
+
+
+function selectSize(size) {
+
+  const sizeInput =
+    document.getElementById(
+      'modalSize'
+    );
+
+
+  if (!sizeInput) return;
+
+
+  sizeInput.value =
+    size;
+
+
+  document
+    .querySelectorAll('.size-btn')
+    .forEach(btn => {
+
+      if (
+        btn.getAttribute(
+          'data-size'
+        ) === size
+      ) {
+
+        btn.style.background =
+          'var(--forjha-orange)';
+
+        btn.style.color =
+          'var(--forjha-white)';
+
+        btn.style.borderColor =
+          'var(--forjha-orange)';
+
+      }
+
+      else {
+
+        btn.style.background =
+          'var(--forjha-dark)';
+
+        btn.style.color =
+          'var(--forjha-gray)';
+
+        btn.style.borderColor =
+          'var(--forjha-border)';
+
+      }
+
+    });
+
+}
+
+
+
+// ============================================================
+// ADICIONAR AO CARRINHO PELO MODAL
+// ============================================================
+
+function addToCartFromModal(
+  id,
+  clickedButton = null
+) {
+
+  const p =
+    DB.products.find(
+      x => x.id === id
+    );
+
+
+  if (!p) return;
+
+
+  const size =
+    p.cat === 'roupas'
+
+      ? document
+          .getElementById(
+            'modalSize'
+          )?.value
+
+      : null;
+
+
+  if (
+    p.cat === 'roupas' &&
+    !size
+  ) {
+
+    showToast(
+      `<i class="bi bi-exclamation-circle me-2"
+       style="color:var(--forjha-orange);"></i>
+       Selecione um tamanho!`
+    );
+
+    return;
+
+  }
+
+
+  const qty =
+    parseInt(
+      document.getElementById(
+        'modalQty'
+      )?.value
+    ) || 1;
+
+
+  const cartKey =
+    size
+      ? `${id}-${size}`
+      : id;
+
+
+  const existing =
+    cart.find(
+      c => c.cartKey === cartKey
+    );
+
+
+  if (existing) {
+
+    existing.qty += qty;
+
+
+    if (existing.qty > p.stock) {
+
+      existing.qty =
+        p.stock;
+
+    }
+
+  }
+
+  else {
+
+    const item = {
+
+      ...p,
+
+      qty,
+
+      cartKey,
+
+      size:
+        size || null
+
+    };
+
+
+    cart.push(item);
+
+  }
+
+
+  const btn =
+    clickedButton ||
+
+    document.querySelector(
+      '#modalContent .btn-primary-forjha'
+    );
+
+
+  if (btn) {
+
+    btn.style.transform =
+      'scale(.95)';
+
+
+    btn.innerHTML =
+      '<i class="bi bi-check me-2"></i>Adicionado!';
+
+
+    btn.style.background =
+      '#22c55e';
+
+  }
+
+
+  renderCart();
+
+  updateAdminStats();
+
+  saveCart();
+
+
+  const sizeText =
+    size
+      ? ` (${size})`
+      : '';
+
+
+  showToast(
+    `<i class="bi bi-check-circle-fill me-2"
+     style="color:#4ade80;"></i>
+     "${p.name}"${sizeText}
+     (x${qty}) adicionado ao carrinho!`
+  );
+
+
+  setTimeout(() => {
+
+    if (btn) {
+
+      btn.style.transform =
+        'scale(1)';
+
+
+      btn.innerHTML =
+        '<i class="bi bi-bag-plus me-2"></i>Adicionar ao Carrinho';
+
+
+      btn.style.background =
+        '';
+
+    }
+
+
+    bootstrap.Modal
+      .getInstance(
+        document.getElementById(
+          'productModal'
+        )
+      )
+      ?.hide();
+
+  }, 600);
+
+}
+
+
+
+// ============================================================
+// ADMIN
+// ============================================================
+
+function renderOrders() {
+
+  const table =
+    document.getElementById(
+      'ordersTable'
+    );
+
+
+  if (!table) return;
+
+
+  table.innerHTML =
+    DB.orders
+      .slice(0,10)
+      .map(o => `
+
+        <tr>
+
+          <td style="
+            color:var(--forjha-orange);
+            font-weight:700;
+          ">
+
+            ${o.id}
+
+          </td>
+
+
+          <td>
+            ${o.client}
+          </td>
+
+
+          <td>
+            ${o.product}
+          </td>
+
+
+          <td style="
+            font-family:'Bebas Neue';
+            font-size:1rem;
+          ">
+
+            ${o.value}
+
+          </td>
+
+
+          <td style="color:var(--forjha-gray);">
+
+            ${o.date}
+
+          </td>
+
+
+          <td>
+
+            <span class="status-badge status-${o.status}">
+              ${o.status}
+            </span>
+
+          </td>
+
+        </tr>
+
+      `)
+      .join('');
+
+}
+
+
+
+function renderStock() {
+
+  const table =
+    document.getElementById(
+      'stockTable'
+    );
+
+
+  if (!table) return;
+
+
+  table.innerHTML =
+    DB.products
+      .map(p => {
+
+        const status =
+          p.stock > 30
+
+            ? 'Em Estoque'
+
+            : p.stock > 0
+
+              ? 'Estoque Baixo'
+
+              : 'Esgotado';
+
+
+        const cls =
+          p.stock > 30
+
+            ? 'status-pago'
+
+            : p.stock > 0
+
+              ? 'status-pendente'
+
+              : 'status-cancelado';
+
+
+        return `
+
+          <tr>
+
+            <td>
+              ${p.name}
+            </td>
+
+
+            <td style="color:var(--forjha-gray);">
+
+              ${catLabel(p.cat)}
+
+            </td>
+
+
+            <td style="
+              font-family:'Bebas Neue';
+              font-size:1rem;
+              color:var(--forjha-orange);
+            ">
+
+              R$
+              ${p.price.toFixed(2).replace('.',',')}
+
+            </td>
+
+
+            <td>
+              ${p.stock}
+            </td>
+
+
+            <td>
+
+              <span class="status-badge ${cls}">
+                ${status}
+              </span>
+
+            </td>
+
+          </tr>
+
+        `;
+
+      })
+      .join('');
+
+}
+
+
+
+function updateAdminStats() {
+
+  const totalItems =
+    cart.reduce(
+      (s,c) => s + c.qty,
+      0
+    );
+
+
+  const todayOrders =
+    DB.orders.filter(
+      o =>
+        o.date ===
+        new Date().toLocaleDateString('pt-BR')
+    );
+
+
+  const todaySales =
+    todayOrders
+      .filter(
+        o => o.status !== 'cancelado'
+      )
+      .reduce(
+        (s,o) => {
+
+          const v =
+            parseFloat(
+              o.value
+                .replace('R$ ','')
+                .replace(',','.')
+            );
+
+
+          return s +
+            (
+              isNaN(v)
+                ? 0
+                : v
+            );
+
+        },
+        0
+      );
+
+
+  const statVendas =
+    document.getElementById(
+      'statVendas'
+    );
+
+
+  const statPedidos =
+    document.getElementById(
+      'statPedidos'
+    );
+
+
+  const statItens =
+    document.getElementById(
+      'statItens'
+    );
+
+
+  if (statVendas) {
+
+    statVendas.textContent =
+      `R$ ${todaySales.toFixed(2).replace('.',',')}`;
+
+  }
+
+
+  if (statPedidos) {
+
+    statPedidos.textContent =
+      DB.orders.length;
+
+  }
+
+
+  if (statItens) {
+
+    statItens.textContent =
+      totalItems;
+
+  }
+
+}
+
+
+
+// ============================================================
+// ADICIONAR PRODUTO
+// ============================================================
+
+function addProduct() {
+
+  const nameEl =
+    document.getElementById(
+      'newName'
+    );
+
+
+  const catEl =
+    document.getElementById(
+      'newCat'
+    );
+
+
+  const priceEl =
+    document.getElementById(
+      'newPrice'
+    );
+
+
+  const stockEl =
+    document.getElementById(
+      'newStock'
+    );
+
+
+  const ratingEl =
+    document.getElementById(
+      'newRating'
+    );
+
+
+  const imgEl =
+    document.getElementById(
+      'newImg'
+    );
+
+
+  const descEl =
+    document.getElementById(
+      'newDesc'
+    );
+
+
+  if (
+    !nameEl ||
+    !catEl ||
+    !priceEl ||
+    !stockEl ||
+    !ratingEl ||
+    !imgEl ||
+    !descEl
+  ) {
+
+    return;
+
+  }
+
+
+  const name =
+    nameEl.value.trim();
+
+
+  const cat =
+    catEl.value;
+
+
+  const price =
+    parseFloat(
+      priceEl.value
+    );
+
+
+  const stock =
+    parseInt(
+      stockEl.value
+    );
+
+
+  const rating =
+    parseFloat(
+      ratingEl.value
+    ) || 5;
+
+
+  const img =
+    imgEl.value.trim() ||
+
+    'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&q=80';
+
+
+  const desc =
+    descEl.value.trim() ||
+    'Produto Forjha.';
+
+
+  if (
+    !name ||
+    isNaN(price) ||
+    isNaN(stock)
+  ) {
+
+    showToast(
+      `<i class="bi bi-exclamation-circle me-2"
+       style="color:var(--forjha-orange);"></i>
+       Preencha nome, preço e estoque!`
+    );
+
+    return;
+
+  }
+
+
+  const newId =
+    DB.products.length
+
+      ? Math.max(
+          ...DB.products.map(
+            p => p.id
+          )
+        ) + 1
+
+      : 1;
+
+
+  const newProd = {
+
+    id:newId,
+
+    name,
+
+    cat,
+
+    price,
+
+    oldPrice:null,
+
+    rating,
+
+    reviews:0,
+
+    stock,
+
+    badge:'new',
+
+    // IMAGEM 1 DO PRODUTO NOVO
+    imagem1:img,
+
+    desc
+
+  };
+
+
+  DB.products.unshift(
+    newProd
+  );
+
+
+  renderProducts();
+
+  renderStock();
+
+  updateAdminStats();
+
+
+  [
+    'newName',
+    'newPrice',
+    'newStock',
+    'newRating',
+    'newImg',
+    'newDesc'
+
+  ].forEach(id => {
+
+    const field =
+      document.getElementById(id);
+
+
+    if (field) {
+
+      field.value =
+        '';
+
+    }
+
+  });
+
+
+  showToast(
+    `<i class="bi bi-check-circle-fill me-2"
+     style="color:#4ade80;"></i>
+     "${name}" cadastrado com sucesso!`
+  );
+
+}
+
+
+
+// ============================================================
+// NEWSLETTER
+// ============================================================
+
+function subscribeNewsletter() {
+
+  const email =
+    document.getElementById(
+      'nlEmail'
+    ).value.trim();
+
+
+  if (
+    !email ||
+    !email.includes('@')
+  ) {
+
+    showToast(
+      `<i class="bi bi-exclamation-circle me-2"
+       style="color:var(--forjha-orange);"></i>
+       Digite um e-mail válido!`
+    );
+
+    return;
+
+  }
+
+
+  document.getElementById(
+    'nlEmail'
+  ).value =
+    '';
+
+
+  showToast(
+    `<i class="bi bi-check-circle-fill me-2"
+     style="color:#4ade80;"></i>
+     Inscrito com sucesso! Obrigado 🎉`
+  );
+
+}
+
+
+
+// ============================================================
+// TOAST
+// ============================================================
+
+function showToast(msg) {
+
+  const msgEl =
+    document.getElementById(
+      'toastMsg'
+    );
+
+
+  const toastEl =
+    document.getElementById(
+      'mainToast'
+    );
+
+
+  if (!msgEl || !toastEl) {
+    return;
+  }
+
+
+  msgEl.innerHTML =
+    msg;
+
+
+  const toast =
+    new bootstrap.Toast(
+      toastEl,
+      {
+        delay:3500
+      }
+    );
+
+
+  toast.show();
+
+}
+
+
+
+// ============================================================
+// INICIALIZAÇÃO
+// ============================================================
+
+function init() {
+
+  initUser();
+
+  loadCart();
+
+  renderProducts();
+
+  renderOrders();
+
+  renderStock();
+
+  renderCart();
+
+  updateAdminStats();
+
+
+
+  // Nav link active on scroll
+
+  const sections =
+    document.querySelectorAll(
+      'section[id]'
+    );
+
+
+  window.addEventListener(
+    'scroll',
+    () => {
+
+      let current =
+        '';
+
+
+      sections.forEach(s => {
+
+        if (
+          window.scrollY >=
+          s.offsetTop - 100
+        ) {
+
+          current =
+            s.id;
+
+        }
+
+      });
+
+
+      document
+        .querySelectorAll(
+          '.nav-link-forjha'
+        )
+        .forEach(l => {
+
+          l.classList.remove(
+            'active'
+          );
+
+
+          if (
+            l.getAttribute(
+              'href'
+            ) ===
+            `#${current}`
+          ) {
+
+            l.classList.add(
+              'active'
+            );
+
+          }
+
+        });
+
+    }
+  );
+
+
+
+  // Sync search inputs
+
+  const searchInput =
+    document.getElementById(
+      'searchInput'
+    );
+
+
+  const searchInput2 =
+    document.getElementById(
+      'searchInput2'
+    );
+
+
+  if (
+    searchInput &&
+    searchInput2
+  ) {
+
+    searchInput.addEventListener(
+      'input',
+      function() {
+
+        searchInput2.value =
+          this.value;
+
+        filterProducts();
+
+      }
+    );
+
+
+    searchInput2.addEventListener(
+      'input',
+      function() {
+
+        searchInput.value =
+          this.value;
+
+        filterProducts();
+
+      }
+    );
+
+  }
+
+}
+
+
+document.addEventListener(
+  'DOMContentLoaded',
+  init
+);
+</script>
+
+<script>
+    (function () {
+      try {
+        const session = JSON.parse(localStorage.getItem('forjhaSession') || 'null');
+        if (!session) window.location.replace('login.html');
+      } catch (_) {
+        window.location.replace('login.html');
+      }
+    })();
+  </script>
+</head>
+
+<body>

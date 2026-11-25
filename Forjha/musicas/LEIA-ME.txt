@@ -1,0 +1,8 @@
+MÚSICAS DO PLAYER FORJHA
+
+As quatro faixas cadastradas estão nesta pasta. Para adicionar outra música:
+1. Copie o arquivo MP3 para esta pasta.
+2. Abra index.html e procure por MUSICAS_FORJHA.
+3. Adicione uma linha no formato: { titulo: "Nome", arquivo: "musicas/arquivo.mp3" },
+
+A primeira faixa começa por tentativa de reprodução automática. Alguns navegadores bloqueiam áudio automático; nesse caso, o visitante deve clicar em Reproduzir no player.

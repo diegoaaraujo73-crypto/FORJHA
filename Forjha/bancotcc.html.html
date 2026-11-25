@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTrust | Advanced Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent-neon: #00f2ff;
+            --primary-gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            --dark-core: #050505;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top right, #1a1a2e, #050505);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Banner de Simulação Estilizado */
+        .simulation-header {
+            background: rgba(255, 71, 71, 0.15);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 71, 71, 0.3);
+            color: #ff7675;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        /* Efeito de Brilho no Fundo */
+        .glow-sphere {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(108, 92, 231, 0.2) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(50px);
+        }
+
+        /* Login Avançado */
+        #login-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+        }
+
+        .login-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 50px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 450px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .login-card:hover {
+            border-color: var(--accent-neon);
+            transform: translateY(-5px);
+        }
+
+        .form-control {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            color: white;
+            border-radius: 12px;
+            padding: 12px 15px;
+        }
+
+        .form-control:focus {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--accent-neon);
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+        }
+
+        .btn-neon {
+            background: var(--primary-gradient);
+            border: none;
+            color: white;
+            font-weight: 700;
+            border-radius: 12px;
+            padding: 14px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .btn-neon:hover {
+            box-shadow: 0 0 25px rgba(108, 92, 231, 0.5);
+            transform: scale(1.02);
+        }
+
+        .login-tip {
+            background: rgba(0, 242, 255, 0.1);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 0.8rem;
+            color: var(--accent-neon);
+            margin-top: 20px;
+        }
+
+        /* Dashboard Futurista */
+        #dashboard-page { display: none; padding-top: 40px; }
+
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .card-visa {
+            background: linear-gradient(135deg, #2d3436 0%, #000000 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-visa .chip {
+            width: 50px;
+            height: 40px;
+            background: linear-gradient(135deg, #ffd700, #b8860b);
+            border-radius: 8px;
+        }
+
+        .balance-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #fff, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .action-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .action-circle:hover {
+            background: var(--primary-gradient);
+            transform: rotate(15deg);
+        }
+
+        .nav-futuristic {
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        /* Animações */
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+        .live-indicator {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="simulation-header">AMBIENTE DE SIMULAÇÃO - NÃO É UM SISTEMA REAL</div>
+      <li class="nav-item"><a class="nav-link nav-link-forjha" href="index.html">Loja</a></li>
+
+    <div class="glow-sphere" style="top: 10%; left: 10%;"></div>
+    <div class="glow-sphere" style="bottom: 10%; right: 10%;"></div>
+
+    <nav class="navbar navbar-dark nav-futuristic d-none" id="main-nav">
+        <div class="container">
+            <span class="navbar-brand fw-800 fs-4">
+                <span style="color: var(--accent-neon)">NOVA</span>TRUST
+            </span>
+            <button class="btn btn-outline-danger btn-sm rounded-pill" onclick="location.reload()">
+                Encerrar Sessão
+            </button>
+        </div>
+    </nav>
+
+    <div class="container" id="login-page">
+        <div class="login-card">
+            <div class="text-center mb-5">
+                <div class="mb-3">
+                    <i class="bi bi-fingerprint" style="font-size: 3rem; color: var(--accent-neon);"></i>
+                </div>
+                <h2 class="fw-bold">Acesso Biométrico</h2>
+                <p class="text-secondary">Identifique-se para prosseguir</p>
+            </div>
+            
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label class="form-label small text-secondary">E-MAIL DE ACESSO</label>
+                    <input type="email" id="email" class="form-control" placeholder="exemplo@novatrust.com" required>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label small text-secondary">CHAVE DE SEGURANÇA</label>
+                    <input type="password" id="password" class="form-control" placeholder="••••••" required>
+                </div>
+                <button type="submit" class="btn btn-neon w-100">AUTENTICAR</button>
+            </form>
+
+            <div class="login-tip text-center">
+                <i class="bi bi-info-circle me-1"></i> 
+                <strong>Dica de Acesso:</strong><br>
+                Email: lbf09@gmail.com <br>
+                Senha: 123456
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5" id="dashboard-page">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h4 class="mb-0">Bem-vindo ao Futuro,</h4>
+                        <h2 class="fw-800" style="color: var(--accent-neon);">Lorenzo</h2>
+                    </div>
+                    <div class="text-end">
+                        <span class="small text-secondary d-block">Status do Sistema</span>
+                        <span class="small"><span class="live-indicator"></span> Online</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <p class="text-secondary mb-1">Patrimônio Total</p>
+                            <h1 class="balance-text" id="balance-display">R$ 12.450,75</h1>
+                            <span class="badge bg-success bg-opacity-10 text-success">+ 2.4% este mês</span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-visa">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="chip"></div>
+                                    <i class="bi bi-contactless fs-3 text-secondary"></i>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="mb-0 fs-5">**** **** **** 8842</p>
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <span class="small opacity-50">Lorenzo B F </span>
+                                        <span class="small opacity-50">12/30</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 text-center mb-4">
+                    <div class="col-4" onclick="showModal('transfer')">
+                        <div class="action-circle"><i class="bi bi-send-fill"></i></div>
+                        <span class="small">Enviar</span>
+                    </div>
+                    <div class="col-4" onclick="showModal('pay')">
+                        <div class="action-circle"><i class="bi bi-qr-code"></i></div>
+                        <span class="small">Pagar</span>
+                    </div>
+                    <div class="col-4" onclick="showModal('deposit')">
+                        <div class="action-circle"><i class="bi bi-plus-lg"></i></div>
+                        <span class="small">Depositar</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel">
+                    <h5 class="fw-bold mb-4">Fluxo Recente</h5>
+                    <div id="transaction-container"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="glass-panel text-center">
+                    <i class="bi bi-cpu fs-1 mb-3" style="color: var(--accent-neon);"></i>
+                    <h6>NovaTrust AI</h6>
+                    <p class="small text-secondary">Sua carteira rendeu mais que o CDI hoje. Deseja investir o excedente?</p>
+                    <button class="btn btn-sm btn-outline-info w-100 rounded-pill">Ver Sugestões</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="operationModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 glass-panel" style="background: #111; color: white;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Operação</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="forjha-fx.js"></script>
+    <script>
+        let balance = 12450.75;
+        const transactions = [
+            { title: "Quantum Cloud Serv.", date: "Hoje", val: -420.00 },
+            { title: "Pix Recebido: HÜST Tech", date: "Ontem", val: 1200.00 },
+            { title: "Nexus Store", date: "22 Out", val: -150.50 }
+        ];
+
+        const loginForm = document.getElementById('loginForm');
+        const modal = new bootstrap.Modal(document.getElementById('operationModal'));
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if(document.getElementById('email').value === "lbf09@gmail.com" && 
+               document.getElementById('password').value === "123456") {
+                document.getElementById('login-page').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('login-page').style.display = 'none';
+                    document.getElementById('main-nav').classList.remove('d-none');
+                    document.getElementById('dashboard-page').style.display = 'block';
+                    updateUI();
+                }, 400);
+            } else {
+                alert("Falha na autenticação!");
+            }
+        });
+
+        function updateUI() {
+            document.getElementById('balance-display').innerText = balance.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+            const container = document.getElementById('transaction-container');
+            container.innerHTML = '';
+            transactions.forEach(t => {
+                container.insertAdjacentHTML('afterbegin', `
+                    <div class="d-flex justify-content-between align-items-center py-3 border-bottom border-secondary border-opacity-25">
+                        <div><p class="mb-0 fw-bold">${t.title}</p><small class="text-secondary">${t.date}</small></div>
+                        <span class="fw-bold ${t.val < 0 ? 'text-danger' : 'text-info'}">
+                            ${t.val < 0 ? '' : '+'}${t.val.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
+                        </span>
+                    </div>
+                `);
+            });
+        }
+
+        function showModal(type) {
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            if(type === 'transfer') {
+                title.innerText = "Enviar Crédito Quantum";
+                body.innerHTML = `<input type="text" id="op-name" class="form-control mb-3" placeholder="ID da Conta"><input type="number" id="op-amount" class="form-control mb-3" placeholder="Valor R$"><button class="btn btn-neon w-100" onclick="processOp('out')">Autorizar Envio</button>`;
+            } else if(type === 'deposit') {
+                title.innerText = "Injetar Capital";
+                body.innerHTML = `<input type="number" id="op-amount" class="form-control mb-3" placeholder="Valor R$"><button class="btn btn-neon w-100" onclick="processOp('in')">Processar Depósito</button>`;
+            } else if(type === 'pay') {
+                title.innerText = "Liquidante de Boletos";
+                body.innerHTML = `<input type="text" id="op-name" class="form-control mb-3" placeholder="Scanner Código de Barras"><input type="number" id="op-amount" class="form-control mb-3" placeholder="Valor R$"><button class="btn btn-neon w-100" onclick="processOp('out')">Confirmar Pagamento</button>`;
+            }
+            modal.show();
+        }
+
+        function processOp(direction) {
+            const val = parseFloat(document.getElementById('op-amount').value);
+            const name = document.getElementById('op-name')?.value || "Aporte Digital";
+            if(!val || val <= 0) return;
+            if(direction === 'out' && val > balance) { alert("Crédito insuficiente no núcleo."); return; }
+            balance = (direction === 'out') ? balance - val : balance + val;
+            transactions.push({ title: name, date: "Agora", val: (direction === 'out' ? -val : val) });
+            modal.hide();
+            updateUI();
+        }
+    </script>
+</body>
+</html>

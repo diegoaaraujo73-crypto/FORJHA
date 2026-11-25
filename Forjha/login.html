@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORJHA | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <style>
+      :root {
+        --forjha-black: #0a0a0a;
+        --forjha-dark: #111111;
+        --forjha-card: #181818;
+        --forjha-border: #2a2a2a;
+        --forjha-orange: #ff4d00;
+        --forjha-orange-hover: #e04400;
+        --forjha-gray: #8c8c8c;
+        --forjha-light: #d9d9d9;
+        --forjha-white: #f5f5f5;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        color: var(--forjha-white);
+        font-family: 'Barlow', sans-serif;
+      }
+
+      .login-shell {
+        width: min(1200px, 94vw);
+        min-height: 720px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        background: #000;
+        border: 1px solid #1d1d1d;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      }
+
+      .login-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        padding: 24px;
+      }
+
+      .login-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(0,0,0,0.12));
+      }
+
+      .logo-art {
+        position: relative;
+        z-index: 1;
+        width: min(88%, 620px);
+        max-width: 620px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-art img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        filter: drop-shadow(0 14px 14px rgba(255,255,255,0.12));
+      }
+
+      .visual-content {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 36px 32px;
+        pointer-events: none;
+      }
+
+      .visual-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        padding: 8px 12px;
+        border: 1px solid rgba(255,255,255,0.25);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 999px;
+        font-size: 0.74rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      .visual-tag i { color: var(--forjha-orange); }
+
+      .visual-text {
+        margin-top: 18px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(2.5rem, 4vw, 5rem);
+        line-height: 0.9;
+        letter-spacing: 0.06em;
+        max-width: 330px;
+        color: #fff;
+      }
+
+      .visual-text span { color: var(--forjha-orange); }
+
+      .login-panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+        background: rgba(13, 13, 13, 0.98);
+      }
+
+      .login-box {
+        width: min(440px, 100%);
+      }
+
+      .brand {
+        margin-bottom: 20px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 2.4rem;
+        letter-spacing: 0.12em;
+        color: var(--forjha-orange);
+      }
+
+      .brand span { color: var(--forjha-white); }
+
+      .toggle-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .toggle-btn {
+        border: 1px solid var(--forjha-border);
+        background: transparent;
+        color: var(--forjha-gray);
+        border-radius: 10px;
+        padding: 10px 12px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .toggle-btn.active {
+        background: var(--forjha-orange);
+        color: #fff;
+        border-color: var(--forjha-orange);
+      }
+
+      .auth-form {
+        display: none;
+      }
+
+      .auth-form.active {
+        display: block;
+      }
+
+      .login-title {
+        margin: 0 0 6px;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--forjha-white);
+      }
+
+      .login-subtitle {
+        margin: 0 0 28px;
+        color: var(--forjha-gray);
+        font-size: 0.98rem;
+      }
+
+      .form-group {
+        position: relative;
+        margin-bottom: 18px;
+      }
+
+      .form-group i {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--forjha-gray);
+        font-size: 1rem;
+      }
+
+      .input-forjha {
+        width: 100%;
+        height: 52px;
+        border: 1px solid var(--forjha-border);
+        border-radius: 12px;
+        background: rgba(255,255,255,0.02);
+        color: var(--forjha-white);
+        padding: 0 16px 0 42px;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        font-size: 0.96rem;
+      }
+
+      .input-forjha::placeholder { color: #6e6e6e; }
+
+      .input-forjha:focus {
+        border-color: rgba(255, 77, 0, 0.9);
+        box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.15);
+      }
+
+      .form-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 10px 0 22px;
+        color: var(--forjha-gray);
+        font-size: 0.9rem;
+      }
+
+      .remember {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .remember input {
+        accent-color: var(--forjha-orange);
+        width: 14px;
+        height: 14px;
+      }
+
+      .link-text {
+        color: var(--forjha-orange);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btn-login {
+        width: 100%;
+        height: 52px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--forjha-orange), #ff6a2c);
+        color: #fff;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.2s ease;
+        box-shadow: 0 18px 30px rgba(255, 77, 0, 0.28);
+      }
+
+      .btn-login:hover { transform: translateY(-2px); }
+
+      .message {
+        min-height: 22px;
+        margin-top: 14px;
+        font-size: 0.88rem;
+        color: var(--forjha-gray);
+      }
+
+      .message.error { color: #ffb4a6; }
+      .message.success { color: #8ef0ae; }
+
+      .admin-note {
+        margin-top: 16px;
+        color: var(--forjha-gray);
+        font-size: 0.8rem;
+        line-height: 1.6;
+      }
+
+      .admin-note strong { color: var(--forjha-white); }
+
+      /* ===== INTRODUÇÃO EM VÍDEO ===== */
+      body.intro-active {
+        overflow: hidden;
+      }
+
+      .intro-video {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        opacity: 1;
+        transition: opacity 0.55s ease;
+      }
+
+      .intro-video.is-leaving {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .intro-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: #000;
+        animation: introZoom 7s cubic-bezier(.2,.7,.2,1) both;
+      }
+
+      .intro-brand {
+        position: absolute;
+        z-index: 3;
+        top: 28px;
+        left: 28px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(1.8rem, 5vw, 3.2rem);
+        letter-spacing: .12em;
+        color: var(--forjha-orange);
+        text-shadow: 0 8px 24px rgba(0,0,0,.7);
+        opacity: 0;
+        animation: introBrandIn .9s .25s ease forwards;
+      }
+
+      .intro-brand span { color: #fff; }
+
+      .intro-progress {
+        position: absolute;
+        z-index: 3;
+        left: 24px;
+        bottom: 24px;
+        width: min(260px, calc(100% - 180px));
+        height: 3px;
+        border-radius: 999px;
+        background: rgba(255,255,255,.22);
+        overflow: hidden;
+      }
+
+      .intro-progress span {
+        display: block;
+        width: 0;
+        height: 100%;
+        background: var(--forjha-orange);
+        box-shadow: 0 0 12px rgba(255,77,0,.7);
+      }
+
+      @keyframes introZoom {
+        from { transform: scale(1.025); filter: brightness(.78); }
+        to { transform: scale(1); filter: brightness(1); }
+      }
+
+      @keyframes introBrandIn {
+        from { opacity: 0; transform: translateY(-14px); letter-spacing: .28em; }
+        to { opacity: 1; transform: translateY(0); letter-spacing: .12em; }
+      }
+
+      [hidden] { display: none !important; }
+
+      @media (max-width: 840px) {
+        .login-shell { grid-template-columns: 1fr; }
+        .login-visual { min-height: 260px; }
+      }
+    </style>
+  
+  <style>
+    body{background:radial-gradient(ellipse at 18% 20%,rgba(255,90,31,.13),transparent 38rem),#050505!important}
+    .login-shell{border:1px solid rgba(255,255,255,.1)!important;border-radius:26px!important;box-shadow:0 35px 100px rgba(0,0,0,.62),0 0 60px rgba(255,90,31,.07)!important;animation:loginRise .75s cubic-bezier(.2,.8,.2,1) both}
+    .login-visual{background:radial-gradient(circle at 50% 42%,rgba(255,90,31,.13),transparent 55%),#080808!important}
+    .login-panel{background:linear-gradient(145deg,rgba(18,18,18,.98),rgba(8,8,8,.99))!important}
+    .input-forjha{background:rgba(255,255,255,.035)!important}
+    .toggle-btn,.input-forjha{transition:all .25s ease!important}
+    .toggle-btn:hover{border-color:rgba(255,90,31,.6);color:#fff}
+    .auth-form.active{animation:loginFormIn .35s ease both}
+    @keyframes loginRise{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:none}}
+    @keyframes loginFormIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    @media(max-width:760px){.login-shell{width:min(520px,94vw)!important;min-height:0!important;border-radius:20px!important}.login-visual{min-height:250px!important}.logo-art{width:min(48%,220px)!important}.visual-content{padding:22px!important}.visual-text{font-size:2.7rem!important}.login-panel{padding:28px 22px!important}}
+    @media(prefers-reduced-motion:reduce){.login-shell,.auth-form.active{animation:none!important}}
+  </style>
+
+</head>
+  <body>
+    <div id="introVideo" class="intro-video" hidden>
+      <video id="forjhaIntro" muted autoplay preload="auto" aria-label="Vídeo de apresentação da Forjha">
+        <source src="forjha-video-vertical.mp4?v=3" type="video/mp4" />
+        <source src="forjha-video.mov" type="video/quicktime" />
+      </video>
+      <div class="intro-brand">FOR<span>JHA</span></div>
+      <div class="intro-progress" aria-hidden="true"><span id="introProgress"></span></div>
+      <button id="skipIntro" class="intro-skip" type="button">Pular vídeo</button>
+    </div>
+
+    <main class="login-shell">
+      <section class="login-visual" aria-label="Imagem de destaque da loja">
+        <div class="logo-art">
+          <img src="forjhadegrade.png" alt="Logo Forjha Studio" />
+        </div>
+        <div class="visual-content">
+          <div class="visual-tag"><i class="bi bi-lightning-charge-fill"></i> Elite Performance</div>
+          
+        </div>
+      </section>
+
+      <section class="login-panel">
+        <div class="login-box">
+          
+
+          <div class="toggle-row">
+            <button class="toggle-btn active" type="button" data-target="loginForm">Entrar</button>
+            <button class="toggle-btn" type="button" data-target="registerForm">Cadastrar</button>
+          </div>
+
+          <form id="loginForm" class="auth-form active">
+            <h1 class="login-title">Acessar conta</h1>
+            <p class="login-subtitle">Entre com seu e-mail e senha.</p>
+
+            <div class="form-group">
+              <i class="bi bi-person"></i>
+              <input id="loginEmail" class="input-forjha" type="email" placeholder="E-mail" required />
+            </div>
+
+            <div class="form-group">
+              <i class="bi bi-lock"></i>
+              <input id="loginPassword" class="input-forjha" type="password" placeholder="Senha" required />
+            </div>
+
+            <div class="form-row">
+              <label class="remember">
+                <input type="checkbox" />
+                <span>Lembrar-me</span>
+              </label>
+              <a class="link-text" href="#">Esqueceu a senha?</a>
+            </div>
+
+            <button class="btn-login" type="submit">Entrar</button>
+            <div id="loginMessage" class="message"></div>
+
+            <div class="admin-note">
+             
+            </div>
+          </form>
+
+          <form id="registerForm" class="auth-form">
+            <h1 class="login-title">Criar conta</h1>
+            <p class="login-subtitle">Cadastre-se para entrar na loja.</p>
+
+            <div class="form-group">
+              <i class="bi bi-person-badge"></i>
+              <input id="registerName" class="input-forjha" type="text" placeholder="Nome completo" required />
+            </div>
+
+            <div class="form-group">
+              <i class="bi bi-envelope"></i>
+              <input id="registerEmail" class="input-forjha" type="email" placeholder="E-mail" required />
+            </div>
+
+            <div class="form-group">
+              <i class="bi bi-lock"></i>
+              <input id="registerPassword" class="input-forjha" type="password" placeholder="Crie uma senha" required />
+            </div>
+
+            <button class="btn-login" type="submit">Cadastrar</button>
+            <div id="registerMessage" class="message"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const ADMIN_EMAIL = 'admin@forjha.com';
+      const ADMIN_PASSWORD = 'forjha123';
+      const USERS_KEY = 'forjhaUsers';
+      const SESSION_KEY = 'forjhaSession';
+
+      function getUsers() {
+        try {
+          return JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+        } catch {
+          return [];
+        }
+      }
+
+      function saveUsers(users) {
+        localStorage.setItem(USERS_KEY, JSON.stringify(users));
+      }
+
+      function setSession(user) {
+        localStorage.setItem(SESSION_KEY, JSON.stringify(user));
+      }
+
+      function redirectIfLoggedIn() {
+        const session = JSON.parse(localStorage.getItem(SESSION_KEY) || 'null');
+        if (!session) return;
+        if (session.type === 'admin') {
+          window.location.href = 'admin.html';
+          return;
+        }
+        if (session.type === 'client') {
+          window.location.href = 'index.html';
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const intro = document.getElementById('introVideo');
+        const introVideo = document.getElementById('forjhaIntro');
+        const skipIntro = document.getElementById('skipIntro');
+        const introProgress = document.getElementById('introProgress');
+        let introFinished = false;
+
+        function finishIntro() {
+          if (introFinished) return;
+          introFinished = true;
+
+          try {
+            introVideo.pause();
+          } catch (_) {}
+
+          intro.classList.add('is-leaving');
+          document.body.classList.remove('intro-active');
+
+          window.setTimeout(() => {
+            intro.hidden = true;
+            intro.classList.remove('is-leaving');
+            redirectIfLoggedIn();
+          }, 550);
+        }
+
+        const session = JSON.parse(localStorage.getItem(SESSION_KEY) || 'null');
+
+        document.body.classList.add('intro-active');
+        intro.hidden = false;
+
+        introVideo.addEventListener('ended', finishIntro, { once: true });
+        introVideo.addEventListener('error', finishIntro, { once: true });
+        skipIntro.addEventListener('click', finishIntro);
+
+        introVideo.addEventListener('timeupdate', () => {
+          if (!introVideo.duration) return;
+          const progress = (introVideo.currentTime / introVideo.duration) * 100;
+          introProgress.style.width = progress + '%';
+        });
+
+        introVideo.play().catch(() => {
+          window.setTimeout(finishIntro, 5000);
+        });
+
+        if (!session) {
+          window.addEventListener('beforeunload', () => introVideo.pause());
+        }
+
+        document.querySelectorAll('.toggle-btn').forEach((button) => {
+          button.addEventListener('click', () => {
+            const target = button.dataset.target;
+            document.querySelectorAll('.toggle-btn').forEach((btn) => btn.classList.toggle('active', btn === button));
+            document.getElementById('loginForm').classList.toggle('active', target === 'loginForm');
+            document.getElementById('registerForm').classList.toggle('active', target === 'registerForm');
+          });
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', (event) => {
+          event.preventDefault();
+          const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+          const password = document.getElementById('loginPassword').value.trim();
+          const message = document.getElementById('loginMessage');
+
+          if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+            setSession({ type: 'admin', email, name: 'Administrador' });
+            message.className = 'message success';
+            message.textContent = 'Login do administrador realizado com sucesso.';
+            setTimeout(() => window.location.href = 'admin.html', 400);
+            return;
+          }
+
+          const users = getUsers();
+          const user = users.find((item) => item.email.toLowerCase() === email && item.password === password);
+
+          if (!user) {
+            message.className = 'message error';
+            message.textContent = 'E-mail ou senha incorretos.';
+            return;
+          }
+
+          setSession({ type: 'client', email: user.email, name: user.name });
+          message.className = 'message success';
+            message.textContent = 'Login realizado com sucesso.';
+            setTimeout(() => window.location.href = 'index.html', 400);
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', (event) => {
+          event.preventDefault();
+          const name = document.getElementById('registerName').value.trim();
+          const email = document.getElementById('registerEmail').value.trim().toLowerCase();
+          const password = document.getElementById('registerPassword').value.trim();
+          const message = document.getElementById('registerMessage');
+
+          if (!name || !email || !password) {
+            message.className = 'message error';
+            message.textContent = 'Preencha todos os campos.';
+            return;
+          }
+
+          if (email === ADMIN_EMAIL) {
+            message.className = 'message error';
+            message.textContent = 'Este e-mail é reservado para o administrador.';
+            return;
+          }
+
+          const users = getUsers();
+          const exists = users.some((item) => item.email.toLowerCase() === email);
+
+          if (exists) {
+            message.className = 'message error';
+            message.textContent = 'Esse e-mail já está cadastrado.';
+            return;
+          }
+
+          users.push({ name, email, password });
+          saveUsers(users);
+
+          message.className = 'message success';
+          message.textContent = 'Cadastro realizado com sucesso! Faça login agora.';
+
+          document.getElementById('registerForm').reset();
+          document.querySelector('[data-target="loginForm"]').click();
+          document.getElementById('loginEmail').value = email;
+        });
+      });
+    </script>
+    <script src="forjha-fx.js"></script>
+  </body>
+</html>

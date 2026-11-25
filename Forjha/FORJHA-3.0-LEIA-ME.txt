@@ -1,0 +1,33 @@
+FORJHA 3.0 — ATUALIZAÇÃO DE EXPERIÊNCIA
+=======================================
+
+O que foi aprimorado nesta versão
+---------------------------------
+- Lista de desejos/favoritos com persistência no navegador (localStorage).
+- Filtro para visualizar somente os produtos favoritos.
+- Contador de favoritos atualizado em tempo real.
+- Botão de favorito em cada card de produto, com estado acessível.
+- Ação rápida para abrir os detalhes do produto.
+- Refinamento visual do catálogo, botões, cartões e estados de interação.
+- Metadados básicos para compartilhamento e mecanismos de busca.
+- Efeitos visuais compartilhados também na página Sobre.
+- Mantidos os arquivos, imagens, páginas e fluxos preexistentes do projeto.
+
+Como executar
+-------------
+1. Extraia a pasta Forjha.
+2. Abra index.html por meio de um servidor local (recomendado) ou use o
+   mesmo método de execução que já utiliza no projeto.
+3. Entre com uma conta cadastrada no sistema para acessar a loja.
+
+Observações técnicas importantes
+--------------------------------
+- A lista de favoritos e o carrinho continuam armazenados localmente no
+  navegador. Eles não são sincronizados entre dispositivos ou usuários.
+- O projeto entregue é uma aplicação front-end estática. Para operação
+  comercial real, ainda é necessário backend com autenticação segura,
+  banco de dados, controle de estoque no servidor, integração de frete e
+  confirmação de pagamento por webhook/API.
+- Não publique credenciais administrativas de demonstração em ambiente real.
+- Teste login, carrinho, checkout, painel administrativo e navegação no
+  ambiente de execução antes de apresentar ou publicar.

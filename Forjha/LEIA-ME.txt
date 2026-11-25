@@ -1,0 +1,11 @@
+FORJHA — Edição visual Signature
+
+Como abrir:
+1. Extraia o ZIP.
+2. Abra Forjha/index.html no navegador ou publique a pasta em qualquer hospedagem estática.
+
+O projeto é front-end estático. Não usa banco de dados, API própria ou servidor de backend.
+Carrinho e preferências existentes ficam no armazenamento local do navegador (localStorage).
+O fluxo de pedido/contato utiliza os links de WhatsApp configurados no front-end.
+
+Observação: Bootstrap, ícones e fontes são carregados por CDN; para carregar esses recursos, é necessária conexão com a internet. Os arquivos e imagens da marca permanecem na pasta do projeto.

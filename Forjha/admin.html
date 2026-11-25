@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FORJHA — Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body { background: var(--forjha-black); color: var(--forjha-white); }
+    .admin-card { background: rgba(24,24,24,.95); border: 1px solid var(--forjha-border); border-radius: 18px; }
+    .admin-card h2 { margin-bottom: 0.8rem; }
+    .admin-card label { color: var(--forjha-light); letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+    .admin-card .form-control { background: #121212; border-color: #262626; color: var(--forjha-white); }
+    .admin-card .form-control:focus { background: #161616; color: var(--forjha-white); border-color: var(--forjha-orange); box-shadow: none; }
+    .admin-card .btn-primary-forjha, .admin-card .btn-outline-forjha { min-width: 160px; }
+    .admin-stat-card { border: 1px solid var(--forjha-border); border-radius: 16px; background: var(--forjha-card); padding: 1.3rem; }
+    .admin-stat-card .stat-title { font-size: .85rem; letter-spacing: .14em; color: var(--forjha-light); text-transform: uppercase; margin-bottom: .6rem; }
+    .admin-stat-card .stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; color: var(--forjha-white); }
+    .admin-panel { background: var(--forjha-card); border: 1px solid var(--forjha-border); border-radius: 18px; padding: 1.5rem; }
+    .status-badge { display: inline-flex; align-items: center; padding: .35rem .75rem; border-radius: 999px; font-size: .78rem; font-weight: 600; }
+    .status-pago { background: #134e4a; color: #a7f3d0; }
+    .status-pendente { background: #78350f; color: #fed7aa; }
+    .status-cancelado { background: #581c87; color: #ddd6fe; }
+    .small-note { color: var(--forjha-gray); font-size: .85rem; }
+    .d-none { display: none !important; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-forjha">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-logo" href="index.html">FOR<span>JHA</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navAdmin">
+      <i class="bi bi-list text-white fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navAdmin">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link nav-link-forjha" href="index.html">Loja</a></li>
+           <li class="nav-item"><a class="nav-link nav-link-forjha" href="bancotcc.html.html">entrar no banco da loja</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="py-5">
+  <div class="container">
+    <div id="loginPanel" class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="admin-card p-4 mb-4">
+          <p class="section-sub">Acesso Restrito</p>
+          <h2 class="section-title">Login de <span class="accent">Admin</span></h2>
+          <p class="text-secondary">Use seu e-mail e senha para entrar na área administrativa.</p>
+          <div class="mb-3">
+            <label for="adminEmail" class="form-label">Usuário</label>
+            <input type="email" id="adminEmail" class="form-control" placeholder="admin@forjha.com" autocomplete="username" />
+          </div>
+          <div class="mb-4">
+            <label for="adminPassword" class="form-label">Senha</label>
+            <input type="password" id="adminPassword" class="form-control" placeholder="Senha" autocomplete="current-password" />
+          </div>
+          <button class="btn btn-primary-forjha w-100" onclick="handleLogin()">Entrar</button>
+          <div id="loginError" class="mt-3 text-warning" style="min-height:1.2rem;"></div>
+          <p class="small-note mt-3 mb-0">LOGIN E SENHA: <strong>admin@forjha.com</strong> / <strong>forjha123</strong></p>
+        </div>
+      </div>
+    </div>
+    <div id="dashboardPanel" class="d-none">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
+        <div>
+          <p class="section-sub">Painel Interno</p>
+          <h2 class="section-title">Dashboard <span class="accent">Admin</span></h2>
+        </div>
+        <button class="btn btn-outline-forjha" onclick="logout()"><i class="bi bi-box-arrow-left me-2"></i>Sair</button>
+      </div>
+      <div class="row g-3 mb-4" id="dashboardStats"></div>
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="admin-panel">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div>
+                <h6 class="text-secondary" style="font-family:'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;">Últimos Pedidos</h6>
+                <p class="small-note mb-0">Resumo rápido dos pedidos mais recentes.</p>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-striped text-white align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>#</th><th>Cliente</th><th>Produto</th><th>Valor</th><th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="ordersTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="admin-panel">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div>
+                <h6 class="text-secondary" style="font-family:'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;">Faturas</h6>
+                <p class="small-note mb-0">Últimas cobranças e pagamentos.</p>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-striped text-white align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>Fatura</th><th>Valor</th><th>Venc.</th><th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="invoicesTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-lg-7">
+          <div class="admin-panel">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div>
+                <h6 class="text-secondary" style="font-family:'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;">Produtos</h6>
+                <p class="small-note mb-0">Gerencie produtos e atualize a quantidade.</p>
+              </div>
+            </div>
+            <div class="table-responsive mb-3">
+              <table class="table table-striped text-white align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>Produto</th><th>Categoria</th><th>Preço</th><th>Estoque</th><th>Ação</th>
+                  </tr>
+                </thead>
+                <tbody id="productsTable"></tbody>
+              </table>
+            </div>
+            <div id="productMessage" class="small-note"></div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="admin-panel">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div>
+                <h6 class="text-secondary" style="font-family:'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;">Adicionar Produto</h6>
+                <p class="small-note mb-0">Preencha os campos e clique em adicionar.</p>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label">Nome</label>
+                <input type="text" class="form-control" id="newProdName" placeholder="Whey Protein Gold" />
+              </div>
+              <div class="col-12">
+                <label class="form-label">Categoria</label>
+                <select id="newProdCat" class="form-select">
+                  <option value="Suplementos">Suplementos</option>
+                  <option value="Roupas">Roupas</option>
+                  <option value="Equipamentos">Equipamentos</option>
+                  <option value="Acessórios">Acessórios</option>
+                  <option value="Nutrição">Nutrição</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Preço</label>
+                <input type="number" class="form-control" id="newProdPrice" placeholder="179.90" step="0.01" />
+              </div>
+              <div class="col-6">
+                <label class="form-label">Estoque</label>
+                <input type="number" class="form-control" id="newProdStock" placeholder="48" />
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary-forjha w-100" onclick="addAdminProduct()">Adicionar Produto</button>
+              </div>
+              <div class="col-12">
+                <div class="small-note text-secondary">O produto será adicionado imediatamente à lista.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+  const credentials = { email: 'admin@forjha.com', password: 'forjha123' };
+  const orders = [
+    { id: '#4521', client: 'Diego da cruz araujo', product: 'Whey Protein Gold', value: 'R$ 179,90', status: 'Pago' },
+    { id: '#4520', client: 'Vitor da big nigh', product: 'Legging Sculpt', value: 'R$ 119,90', status: 'Pago' },
+    { id: '#4519', client: 'Pedro manguete', product: 'Halteres Hex 20kg', value: 'R$ 399,90', status: 'Pendente' },
+    { id: '#4518', client: 'JOAOZAO', product: 'Creatina 500g', value: 'R$ 129,90', status: 'Pago' },
+    { id: '#4517', client: 'tonin', product: 'Corda de Pular', value: 'R$ 49,90', status: 'Cancelado' }
+  ];
+  const invoices = [
+    { id: 'FV-1029', value: 'R$ 179,90', due: '28/05/2026', status: 'Pago' },
+    { id: 'FV-1030', value: 'R$ 119,90', due: '30/05/2026', status: 'Aberta' },
+    { id: 'FV-1031', value: 'R$ 399,90', due: '02/06/2026', status: 'Vencida' },
+    { id: 'FV-1032', value: 'R$ 49,90', due: '05/06/2026', status: 'Aberta' }
+  ];
+
+  const defaultProducts = [
+    { id: 1, name: 'Whey Protein Gold 900g', cat: 'Suplementos', price: 179.90, stock: 48 },
+    { id: 2, name: 'Camiseta Dry-Fit Performance', cat: 'Roupas', price: 89.90, stock: 120 },
+    { id: 3, name: 'Halteres Hex 20kg', cat: 'Equipamentos', price: 399.90, stock: 12 },
+    { id: 4, name: 'Creatina Monohidratada 500g', cat: 'Suplementos', price: 129.90, stock: 33 },
+    { id: 5, name: 'BCAA 2:1:1 300g', cat: 'Nutrição', price: 89.90, stock: 56 }
+  ];
+
+  let products;
+  try { products = JSON.parse(localStorage.getItem('forjhaAdminProducts')) || defaultProducts; }
+  catch { products = defaultProducts; }
+
+  function saveAdminProducts() { localStorage.setItem('forjhaAdminProducts', JSON.stringify(products)); }
+
+  function handleLogin() {
+    const email = document.getElementById('adminEmail').value.trim();
+    const password = document.getElementById('adminPassword').value.trim();
+    const errorEl = document.getElementById('loginError');
+
+    if (!email || !password) {
+      errorEl.textContent = 'Preencha usuário e senha.';
+      return;
+    }
+
+    if (email.toLowerCase() === credentials.email && password === credentials.password) {
+      localStorage.setItem('forjhaSession', JSON.stringify({ type: 'admin', email, name: 'Administrador' }));
+      errorEl.textContent = '';
+      document.getElementById('loginPanel').classList.add('d-none');
+      document.getElementById('dashboardPanel').classList.remove('d-none');
+      renderDashboard();
+      renderOrders();
+      renderInvoices();
+      renderProductsTable();
+      return;
+    }
+
+    errorEl.textContent = 'Usuário ou senha incorretos.';
+  }
+
+  function logout() {
+    localStorage.removeItem('forjhaSession');
+    window.location.href = 'login.html';
+  }
+
+  function renderDashboard() {
+    const totalSales = orders.filter(o => o.status !== 'Cancelado').reduce((sum, o) => sum + parseFloat(o.value.replace('R$ ', '').replace(',', '.')), 0);
+    const totalOrders = orders.length;
+    const paidCount = orders.filter(o => o.status === 'Pago').length;
+    const pendingCount = orders.filter(o => o.status === 'Pendente').length;
+
+    const stats = [
+      { label: 'Faturamento', value: `R$ ${totalSales.toFixed(2).replace('.', ',')}` },
+      { label: 'Pedidos', value: totalOrders },
+      { label: 'Pagas', value: paidCount },
+      { label: 'Pendentes', value: pendingCount }
+    ];
+
+    document.getElementById('dashboardStats').innerHTML = stats.map(item => `
+      <div class="col-6 col-sm-4 col-lg-3">
+        <div class="admin-stat-card">
+          <div class="stat-title">${item.label}</div>
+          <div class="stat-value">${item.value}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderOrders() {
+    document.getElementById('ordersTable').innerHTML = orders.map(o => `
+      <tr>
+        <td style="color: var(--forjha-orange); font-weight: 700;">${o.id}</td>
+        <td>${o.client}</td>
+        <td>${o.product}</td>
+        <td>${o.value}</td>
+        <td><span class="status-badge ${o.status === 'Pago' ? 'status-pago' : o.status === 'Pendente' ? 'status-pendente' : 'status-cancelado'}">${o.status}</span></td>
+      </tr>
+    `).join('');
+  }
+
+  function renderProductsTable() {
+    document.getElementById('productsTable').innerHTML = products.map(prod => `
+      <tr>
+        <td>${prod.name}</td>
+        <td>${prod.cat}</td>
+        <td>R$ ${prod.price.toFixed(2).replace('.', ',')}</td>
+        <td>
+          <input type="number" id="stockInput-${prod.id}" class="form-control" value="${prod.stock}" min="0" style="max-width:120px; background:#121212; border-color:#262626; color:#fff;" />
+        </td>
+        <td>
+          <button class="btn btn-outline-forjha btn-sm" onclick="updateProductStock(${prod.id})">Salvar</button>
+          <button class="btn btn-danger btn-sm ms-1" onclick="removeAdminProduct(${prod.id})" aria-label="Excluir ${prod.name}">Excluir</button>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  function updateProductStock(id) {
+    const input = document.getElementById(`stockInput-${id}`);
+    const value = parseInt(input.value, 10);
+    const product = products.find(p => p.id === id);
+
+    if (!product || isNaN(value) || value < 0) {
+      showAdminMessage('Informe uma quantidade válida.', true);
+      return;
+    }
+
+    product.stock = value;
+    saveAdminProducts();
+    renderProductsTable();
+    showAdminMessage(`Estoque atualizado: ${product.name} agora tem ${product.stock} unidades.`);
+  }
+
+  function addAdminProduct() {
+    const name = document.getElementById('newProdName').value.trim();
+    const category = document.getElementById('newProdCat').value;
+    const price = parseFloat(document.getElementById('newProdPrice').value);
+    const stock = parseInt(document.getElementById('newProdStock').value, 10);
+
+    if (!name || isNaN(price) || isNaN(stock) || price <= 0 || stock < 0) {
+      showAdminMessage('Preencha o nome, preço e estoque corretamente.', true);
+      return;
+    }
+
+    const nextId = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
+    products.push({ id: nextId, name, cat: category, price, stock });
+    saveAdminProducts();
+    renderProductsTable();
+    document.getElementById('newProdName').value = '';
+    document.getElementById('newProdPrice').value = '';
+    document.getElementById('newProdStock').value = '';
+    showAdminMessage(`Produto adicionado: ${name}.`);
+  }
+
+  function showAdminMessage(text, isError = false) {
+    const msg = document.getElementById('productMessage');
+    msg.textContent = text;
+    msg.style.color = isError ? '#f59e0b' : '#9ee7ff';
+    setTimeout(() => { if (msg.textContent === text) msg.textContent = ''; }, 4000);
+  }
+
+  function renderInvoices() {
+    document.getElementById('invoicesTable').innerHTML = invoices.map(inv => `
+      <tr>
+        <td>${inv.id}</td>
+        <td>${inv.value}</td>
+        <td>${inv.due}</td>
+        <td><span class="status-badge ${inv.status === 'Pago' ? 'status-pago' : inv.status === 'Aberta' ? 'status-pendente' : 'status-cancelado'}">${inv.status}</span></td>
+      </tr>
+    `).join('');
+  }
+
+  function logout() {
+    localStorage.removeItem('forjhaSession');
+    window.location.href = 'login.html';
+  }
+
+  function removeAdminProduct(id) {
+    const product = products.find(p => p.id === id);
+    if (!product || !confirm(`Excluir ${product.name}?`)) return;
+    products = products.filter(p => p.id !== id);
+    saveAdminProducts();
+    renderProductsTable();
+    showAdminMessage(`Produto excluído: ${product.name}.`);
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="forjha-fx.js"></script>
+</body>
+</html>

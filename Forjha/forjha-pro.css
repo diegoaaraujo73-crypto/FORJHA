@@ -1,0 +1,95 @@
+/* FORJHA PRO — camada de design, animação e novas seções */
+html{scroll-behavior:smooth}
+#fp-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:9999;background:linear-gradient(90deg,#ff4d00,#ffb347);box-shadow:0 0 12px #ff4d00}
+#fp-glow{position:fixed;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(255,77,0,.12),transparent 65%);transition:opacity .3s}
+@media(hover:none){#fp-glow{display:none}}
+/* Reveal */
+.fp-rev{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.fp-rev.fp-in{opacity:1;transform:none}
+/* Hero */
+.hero{position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 60%,#0a0a0a);pointer-events:none}
+.fp-orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:fpFloat 9s ease-in-out infinite;pointer-events:none}
+.fp-orb.a{width:340px;height:340px;background:#ff4d00;top:-80px;right:8%}
+.fp-orb.b{width:260px;height:260px;background:#ff8a52;bottom:10%;right:30%;animation-delay:-4s}
+@keyframes fpFloat{50%{transform:translate(30px,-40px) scale(1.12)}}
+.hero-title .accent{background:linear-gradient(90deg,#ff4d00,#ffb347,#ff4d00);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:fpShine 4s linear infinite}
+@keyframes fpShine{to{background-position:200% center}}
+.fp-type::after{content:"|";margin-left:2px;color:#ff4d00;animation:fpBlink 1s steps(1) infinite}
+@keyframes fpBlink{50%{opacity:0}}
+.fp-scroll-ind{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:3;width:24px;height:40px;border:2px solid #666;border-radius:14px}
+.fp-scroll-ind::before{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#ff4d00;animation:fpWheel 1.6s infinite}
+@keyframes fpWheel{to{transform:translateY(14px);opacity:0}}
+/* Marquee */
+.fp-marquee{overflow:hidden;background:#ff4d00;color:#0a0a0a;padding:.7rem 0;transform:rotate(-1deg);margin:-14px -10px 0;position:relative;z-index:5}
+.fp-marquee-track{display:flex;gap:2.5rem;width:max-content;animation:fpMarq 28s linear infinite;font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.12em;white-space:nowrap}
+.fp-marquee:hover .fp-marquee-track{animation-play-state:paused}
+@keyframes fpMarq{to{transform:translateX(-50%)}}
+/* Cards */
+.product-card,.feature-card,.testimonial-card{transform-style:preserve-3d;will-change:transform}
+.fp-tilt{transition:transform .15s ease-out}
+.feature-card:hover .feature-icon{animation:fpPop .5s}
+@keyframes fpPop{50%{transform:scale(1.25) rotate(-8deg)}}
+/* Seções novas */
+.fp-sec{padding:5rem 0;position:relative}
+.fp-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;counter-reset:s}
+.fp-step{background:#151515;border:1px solid #2a2a2a;border-radius:16px;padding:1.8rem;position:relative;overflow:hidden;transition:.35s}
+.fp-step::before{counter-increment:s;content:"0" counter(s);position:absolute;right:14px;top:-6px;font-family:'Bebas Neue';font-size:5rem;color:rgba(255,77,0,.12);transition:.35s}
+.fp-step:hover{border-color:#ff4d00;transform:translateY(-6px);box-shadow:0 18px 40px -18px rgba(255,77,0,.5)}
+.fp-step:hover::before{color:rgba(255,77,0,.35);transform:scale(1.15)}
+.fp-step i{font-size:1.9rem;color:#ff4d00}
+.fp-step h4{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.05em;margin:.8rem 0 .4rem;color:#fff}
+.fp-step p{color:#999;margin:0;font-size:.95rem}
+.fp-stats{background:linear-gradient(135deg,#141414,#0d0d0d);border-block:1px solid #222}
+.fp-stat{text-align:center;padding:1.2rem}
+.fp-stat b{display:block;font-family:'Bebas Neue';font-size:3.6rem;color:#ff4d00;line-height:1}
+.fp-stat span{color:#999;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem}
+/* Calculadora */
+.fp-calc{background:#151515;border:1px solid #2a2a2a;border-radius:20px;padding:2rem}
+.fp-calc label{color:#bbb;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem;display:block}
+.fp-calc input,.fp-calc select{width:100%;background:#0d0d0d;border:1px solid #2f2f2f;color:#fff;border-radius:10px;padding:.7rem .9rem;transition:.25s}
+.fp-calc input:focus,.fp-calc select:focus{outline:0;border-color:#ff4d00;box-shadow:0 0 0 3px rgba(255,77,0,.2)}
+.fp-result{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.4rem}
+.fp-result div{background:#0d0d0d;border:1px solid #262626;border-radius:12px;padding:1rem;text-align:center}
+.fp-result b{display:block;font-family:'Bebas Neue';font-size:2rem;color:#ff4d00}
+.fp-result small{color:#888}
+@media(max-width:576px){.fp-result{grid-template-columns:1fr}}
+/* FAQ */
+.fp-faq details{background:#151515;border:1px solid #2a2a2a;border-radius:14px;margin-bottom:.8rem;overflow:hidden;transition:border-color .3s}
+.fp-faq details[open]{border-color:#ff4d00}
+.fp-faq summary{cursor:pointer;padding:1.1rem 1.4rem;color:#fff;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.fp-faq summary::-webkit-details-marker{display:none}
+.fp-faq summary::after{content:"+";font-size:1.6rem;color:#ff4d00;transition:transform .3s}
+.fp-faq details[open] summary::after{transform:rotate(45deg)}
+.fp-faq details p{padding:0 1.4rem 1.2rem;margin:0;color:#aaa;animation:fpDrop .4s}
+@keyframes fpDrop{from{opacity:0;transform:translateY(-8px)}}
+/* Botões flutuantes */
+.fp-fab{position:fixed;right:20px;z-index:900;width:50px;height:50px;border-radius:50%;border:0;display:grid;place-items:center;color:#fff;font-size:1.3rem;cursor:pointer;transition:.3s;text-decoration:none}
+#fp-top{bottom:20px;background:#ff4d00;opacity:0;transform:translateY(20px);pointer-events:none;box-shadow:0 8px 24px rgba(255,77,0,.45)}
+#fp-top.show{opacity:1;transform:none;pointer-events:auto}
+#fp-wa{bottom:80px;background:#25d366;box-shadow:0 8px 24px rgba(37,211,102,.4);animation:fpPulse 2.4s infinite}
+.fp-fab:hover{transform:scale(1.12);color:#fff}
+@keyframes fpPulse{70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}}
+/* Cursor de seleção e foco */
+::selection{background:#ff4d00;color:#fff}
+:focus-visible{outline:2px solid #ff4d00;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.fp-rev{opacity:1;transform:none}}
+
+/* ===== Player de música flutuante (esquerda) ===== */
+#fpMusic.forjha-music-player{position:fixed;left:20px;bottom:20px;z-index:950;margin:0;max-width:none;width:330px;flex-wrap:wrap;gap:.7rem .8rem;padding:.9rem 1rem;border-radius:18px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:linear-gradient(135deg,rgba(255,77,0,.18),rgba(12,12,12,.92));box-shadow:0 18px 45px rgba(0,0,0,.55),0 0 0 1px rgba(255,77,0,.25);animation:fpMusicIn .8s .4s both cubic-bezier(.2,.7,.2,1);transition:width .35s,padding .35s,border-radius .35s}
+@keyframes fpMusicIn{from{opacity:0;transform:translateX(-40px)}}
+#fpMusic .music-player-icon{flex:0 0 42px;width:42px;height:42px;font-size:1.15rem;cursor:pointer}
+#fpMusic.is-playing .music-player-icon i{display:inline-block;animation:fpSpin 3s linear infinite}
+@keyframes fpSpin{to{transform:rotate(360deg)}}
+#fpMusic .music-player-info{flex:1 1 0;min-width:0}
+#fpMusic .music-player-info strong{font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#fpMusic audio{flex:1 1 100%;width:100%;min-width:0;height:36px}
+#fpMusic .music-toggle{position:absolute;top:6px;right:8px;width:26px;height:26px;border:0;border-radius:50%;background:rgba(255,255,255,.08);color:#ddd;display:grid;place-items:center;font-size:.8rem;cursor:pointer;transition:.25s}
+#fpMusic .music-toggle:hover{background:#ff4d00;color:#fff}
+#fpMusic.is-min{width:58px;height:58px;padding:7px;border-radius:50%;flex-wrap:nowrap}
+#fpMusic.is-min .music-player-info,#fpMusic.is-min audio,#fpMusic.is-min .music-toggle{display:none}
+#fpMusic.is-min .music-player-icon{width:42px;height:42px}
+#fpMusic.is-min::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid #ff4d00;opacity:0}
+#fpMusic.is-min.is-playing::after{animation:fpRing 1.8s infinite}
+@keyframes fpRing{from{opacity:.8;transform:scale(.9)}to{opacity:0;transform:scale(1.3)}}
+@media(max-width:575.98px){#fpMusic.forjha-music-player{left:12px;bottom:12px;width:min(300px,calc(100vw - 24px))}#fpMusic.is-min{width:54px;height:54px}}
